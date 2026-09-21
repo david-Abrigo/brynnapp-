@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Brynn</string>
+    <string name="widget_description">Muestra el total acumulado y estadísticas de pagos en tiempo real.</string>
+    <string name="widget_title">Total Brynn Hoy</string>
+    <string name="widget_empty_total">S/ 0.00</string>
+    <string name="widget_no_transactions">Sin pagos registrados hoy</string>
+    <string name="widget_last_tx_prefix">Último: %s</string>
+    <string name="notification_listener_service_name">Servicio de Captura Brynn</string>
+</resources>

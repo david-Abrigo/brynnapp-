@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Brynn: Parlante de Pagos</title>
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #17191f;
+            --text-color: #e6e8ec;
+            --text-muted: #9ba1ad;
+            --accent-color: #a6ff00;
+            --border-color: #262933;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        h1 {
+            color: var(--accent-color);
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: 32px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        p, li {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+        strong {
+            color: var(--text-color);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(166, 255, 0, 0.15);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .highlight-box {
+            background: rgba(166, 255, 0, 0.05);
+            border-left: 4px solid var(--accent-color);
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .highlight-box p {
+            color: #d1d5db;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="badge">POLÍTICA DE PRIVACIDAD OFICIAL</div>
+    <h1>Brynn - Parlante de Pagos</h1>
+    <p><strong>Última actualización:</strong> 21 de septiembre de 2026</p>
+
+    <p>La presente Política de Privacidad describe cómo <strong>Brynn</strong> ("nosotros", "nuestro" o "la aplicación") recopila, utiliza, almacena y protege la información del usuario en relación con nuestra aplicación móvil para Android.</p>
+
+    <h2>1. Información que recopilamos</h2>
+    <p>Para proporcionar las funciones del parlante de cobros y sincronización de ventas para negocios, recopilamos los siguientes tipos de datos:</p>
+    <ul>
+        <li><strong>Información de cuenta:</strong> Dirección de correo electrónico, nombre de perfil y credenciales de autenticación gestionadas de forma segura a través de Supabase / Google Sign-In.</li>
+        <li><strong>Información de la tienda y negocio:</strong> Nombre de la tienda, configuración de sucursales y códigos de vinculación para conectar terminales de trabajadores.</li>
+        <li><strong>Datos de transacciones de pago:</strong> Monto cobrado, nombre o alias del pagador, fecha/hora y notas de la venta. <em>(Nota: Brynn NO recopila números de tarjeta, claves bancarias ni contraseñas financieras).</em></li>
+    </ul>
+
+    <h2>2. Uso del Servicio de Acceso a Notificaciones (Notification Listener Service)</h2>
+    <div class="highlight-box">
+        <p><strong>Declaración de Transparencia de Google Play:</strong> Brynn solicita acceso especial al servicio de escucha de notificaciones de Android (<code>NotificationListenerService</code>). Este permiso es estrictamente necesario para el funcionamiento principal de la aplicación.</p>
+    </div>
+    <p><strong>¿Cómo usamos este permiso?</strong></p>
+    <ul>
+        <li>La aplicación analiza en tiempo real las notificaciones recibidas de aplicaciones de billeteras digitales (como Yape o Plin) para detectar la confirmación de un pago entrante.</li>
+        <li>Al detectar un cobro, la aplicación convierte el monto y el nombre del cliente en voz alta mediante el sintetizador de voz (TTS) para alertar al comerciante y evitar estafas.</li>
+        <li><strong>Exclusión total de mensajes personales:</strong> Brynn <strong>NUNCA</strong> lee, almacena, analiza ni transmite notificaciones de mensajes personales, chats privados (WhatsApp, Telegram, SMS), correos electrónicos ni de ninguna aplicación ajena a las billeteras de pago soportadas.</li>
+    </ul>
+
+    <h2>3. Servicios de Terceros</h2>
+    <p>La aplicación utiliza proveedores externos de infraestructura de confianza para su correcto funcionamiento:</p>
+    <ul>
+        <li><strong>Supabase:</strong> Para el almacenamiento seguro en la nube de cuentas de usuario, configuración de sucursales e historial de ventas del negocio.</li>
+        <li><strong>Firebase Cloud Messaging (Google FCM):</strong> Para transmitir en tiempo real la confirmación de cobro desde el dispositivo receptor hacia las sucursales vinculadas.</li>
+        <li><strong>RevenueCat & Google Play Billing:</strong> Para el procesamiento seguro de pagos de suscripciones (mensuales y anuales). Los datos bancarios y de tarjetas de crédito son procesados directamente por Google Play y nunca pasan por nuestros servidores.</li>
+    </ul>
+
+    <h2>4. Seguridad y Almacenamiento de Datos</h2>
+    <p>Implementamos medidas de seguridad técnicas e híbridas (cifrado SSL/TLS en tránsito y políticas de seguridad a nivel de fila RLS en la base de datos) para asegurar que el historial de transacciones de tu tienda únicamente sea accesible por el propietario de la tienda y sus trabajadores autorizados.</p>
+
+    <h2>5. Retención y Eliminación de Datos</h2>
+    <p>Conservamos tu información mientras mantengas una cuenta activa en la aplicación. Puedes solicitar la eliminación total de tu cuenta y de todo el historial de transacciones en cualquier momento enviando un correo a nuestro equipo de soporte.</p>
+
+    <h2>6. Privacidad de Menores</h2>
+    <p>Nuestra aplicación está orientada a comerciantes, emprendedores y usuarios con edad legal para realizar actividades comerciales (mayores de 18 años o mayores de 13 con supervisión). No recopilamos conscientemente información de menores de 13 años.</p>
+
+    <h2>7. Contacto</h2>
+    <p>Si tienes preguntas, dudas o solicitudes relacionadas con esta Política de Privacidad o el tratamiento de tus datos, puedes contactarnos en:</p>
+    <ul>
+        <li><strong>Correo electrónico de soporte:</strong> soporte.brynn@gmail.com</li>
+        <li><strong>Desarrollador:</strong> Equipo de Desarrollo de Brynn</li>
+    </ul>
+
+    <div class="footer">
+        © 2026 Brynn - Parlante de Pagos. Todos los derechos reservados.
+    </div>
+</div>
+
+</body>
+</html>

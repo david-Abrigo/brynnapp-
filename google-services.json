@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "313077439892",
+    "project_id": "brynn-78e83",
+    "storage_bucket": "brynn-78e83.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313077439892:android:f3e13bb077db5d38998381",
+        "android_client_info": {
+          "package_name": "com.brynn.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC1GlNNLaLrj4XHzzROrcENknXRO_I5ZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
