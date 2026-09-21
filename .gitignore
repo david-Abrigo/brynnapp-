@@ -15,6 +15,7 @@ debug.keystore
 *.jks
 *-firebase-adminsdk-*.json
 *.apk
+*.aab
 *.csv
 window_dump.xml
 current_sc*.png
