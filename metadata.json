@@ -1,6 +1,0 @@
-{
-  "name": "Brynn",
-  "description": "Capturador inteligente de notificaciones de Yape con anuncios por voz en tiempo real, registro de transacciones diarias y widget de pantalla de inicio.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
