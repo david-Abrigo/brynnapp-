@@ -3,121 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Brynn: Parlante de Pagos</title>
-    <meta name="description" content="Política de Privacidad oficial para la aplicación Brynn - Parlante de Pagos.">
+    <title>Términos y Condiciones de Uso & Política de Privacidad - Brynn: Parlante de Pagos</title>
+    <meta name="description" content="Documento Legal Unificado: Condiciones del Servicio, Política de Privacidad, Protección de Datos y Tratamiento de Notificaciones para Brynn - Parlante de Pagos.">
     <link rel="icon" type="image/png" href="logo-app.png">
     <style>
         :root {
             --bg-color: #08090C;
             --card-bg: #0E131F;
-            --text-color: #FFFFFF;
-            --text-muted: #7E8D9F;
-            --accent-color: #CCFF00;
+            --card-border: #1A2234;
+            --accent-lime: #CCFF00;
             --accent-purple: #8E82FE;
-            --border-color: #1A2234;
+            --accent-purple-glow: rgba(142, 130, 254, 0.2);
+            --danger: #FF4D5A;
+            --text-main: #FFFFFF;
+            --text-sub: #7E8D9F;
+            --text-muted: #556274;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.65;
-            margin: 0;
-            padding: 32px 16px;
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 36px 16px 60px;
             -webkit-font-smoothing: antialiased;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 880px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 44px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+            padding: 48px;
+            border-radius: 22px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
         }
+
         .nav-back {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 24px;
+            margin-bottom: 26px;
             color: var(--accent-purple);
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
             transition: color 0.2s;
         }
+
         .nav-back svg {
             width: 16px;
             height: 16px;
         }
+
         .nav-back:hover {
-            color: var(--accent-color);
+            color: var(--accent-lime);
         }
-        h1 {
-            color: var(--accent-color);
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: -0.02em;
-        }
-        h2 {
-            font-size: 19px;
-            color: var(--text-color);
-            margin-top: 34px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            font-weight: 700;
-        }
-        p, li {
-            color: var(--text-muted);
-            font-size: 15px;
-        }
-        strong {
-            color: var(--text-color);
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .badge {
+
+        .badge-unified {
             display: inline-flex;
             align-items: center;
             gap: 6px;
             background: rgba(204, 255, 0, 0.08);
             border: 1px solid rgba(204, 255, 0, 0.22);
-            color: var(--accent-color);
-            padding: 4px 12px;
+            color: var(--accent-lime);
+            padding: 5px 12px;
             border-radius: 6px;
             font-size: 11px;
             font-weight: 800;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
-        .highlight-box {
-            background: rgba(142, 130, 254, 0.08);
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--accent-purple);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin: 22px 0;
+
+        h1 {
+            font-size: clamp(26px, 4vw, 34px);
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
         }
-        .highlight-box p {
-            color: #C2BAFF;
-            margin: 0;
+
+        h1 span {
+            color: var(--accent-lime);
         }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
+
+        .meta-date {
             font-size: 13px;
             color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .footer a {
-            color: var(--accent-color);
+
+        .meta-date svg {
+            width: 14px;
+            height: 14px;
+            color: var(--accent-purple);
+        }
+
+        /* Quick Index Navigation */
+        .index-nav {
+            background: #121724;
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin-bottom: 36px;
+        }
+
+        .index-nav-title {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--accent-purple);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .index-nav-title svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 8px;
+        }
+
+        .index-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-sub);
             text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 6px 8px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .index-link:hover {
+            color: var(--accent-lime);
+            background: rgba(204, 255, 0, 0.05);
+        }
+
+        .index-link svg {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+            color: var(--accent-purple);
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        h2 .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: rgba(142, 130, 254, 0.12);
+            color: var(--accent-purple);
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-purple);
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        p, li {
+            color: var(--text-sub);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 18px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        code {
+            background: #121724;
+            color: var(--accent-lime);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            border: 1px solid var(--card-border);
+        }
+
+        /* Callout Boxes */
+        .callout-box {
+            background: #121724;
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent-purple);
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 22px 0;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .callout-box.lime {
+            border-left-color: var(--accent-lime);
+            background: rgba(204, 255, 0, 0.03);
+        }
+
+        .callout-box.danger {
+            border-left-color: var(--danger);
+            background: rgba(255, 77, 90, 0.04);
+            border-color: rgba(255, 77, 90, 0.25);
+        }
+
+        .callout-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .callout-box p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .callout-box.danger p {
+            color: #FFB8BD;
+        }
+
+        /* Footer */
+        .legal-footer {
+            margin-top: 50px;
+            padding-top: 26px;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .legal-footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .legal-footer-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .legal-footer-links a:hover {
+            color: var(--accent-lime);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 26px 18px;
+            }
+            .index-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -129,60 +324,273 @@
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
-        Volver al inicio
+        Volver a la página principal
     </a>
     <br>
-    <div class="badge">Política de Privacidad Oficial</div>
-    <h1>Brynn - Parlante de Pagos</h1>
-    <p><strong>Última actualización:</strong> 21 de septiembre de 2026</p>
-
-    <p>La presente Política de Privacidad describe cómo <strong>Brynn</strong> ("nosotros", "nuestro" o "la aplicación") recopila, utiliza, almacena y protege la información del usuario en relación con nuestra aplicación móvil para Android.</p>
-
-    <h2>1. Información que recopilamos</h2>
-    <p>Para proporcionar las funciones del parlante de cobros y sincronización de ventas para negocios, recopilamos los siguientes tipos de datos:</p>
-    <ul>
-        <li><strong>Información de cuenta:</strong> Dirección de correo electrónico, nombre de perfil y credenciales de autenticación gestionadas de forma segura a través de Supabase / Google Sign-In.</li>
-        <li><strong>Información de la tienda y negocio:</strong> Nombre de la tienda, configuración de sucursales y códigos de vinculación para conectar terminales de trabajadores.</li>
-        <li><strong>Datos de transacciones de pago:</strong> Monto cobrado, nombre o alias del pagador, fecha/hora y notas de la venta. <em>(Nota: Brynn NO recopila números de tarjeta, claves bancarias ni contraseñas financieras).</em></li>
-    </ul>
-
-    <h2>2. Uso del Servicio de Acceso a Notificaciones (Notification Listener Service)</h2>
-    <div class="highlight-box">
-        <p><strong>Declaración de Transparencia de Google Play:</strong> Brynn solicita acceso especial al servicio de escucha de notificaciones de Android (<code>NotificationListenerService</code>). Este permiso es estrictamente necesario para el funcionamiento principal de la aplicación.</p>
+    <div class="badge-unified">
+        Marco Legal Integral
     </div>
-    <p><strong>¿Cómo usamos este permiso?</strong></p>
+    <h1>Términos de Servicio & <span>Política de Privacidad</span></h1>
+    <div class="meta-date">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        Última actualización y entrada en vigor: 22 de septiembre de 2026 · Versión 2.4.0
+    </div>
+
+    <p>El presente documento constituye el acuerdo legal vinculante, comprensivo y completo aplicable a la descarga, instalación, acceso y utilización del ecosistema de software y servicios de <strong>Brynn - Parlante de Pagos</strong> (en adelante, "Brynn", "la Aplicación", "el Software" o "el Servicio"). Al acceder o utilizar cualquier función de Brynn, el usuario ("Comerciante", "Titular" o "Usuario") declara haber leído, comprendido y aceptado en su totalidad tanto las Condiciones del Servicio como las Políticas de Privacidad y Tratamiento de Datos Personales aquí detalladas.</p>
+
+    <!-- Navigation Index -->
+    <nav class="index-nav" aria-label="Índice de contenido legal">
+        <div class="index-nav-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            Índice de Secciones
+        </div>
+        <div class="index-grid">
+            <a href="#objeto" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                1. Naturaleza y Objeto del Servicio
+            </a>
+            <a href="#deslinde" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                2. Deslinde Bancario y de Marcas
+            </a>
+            <a href="#privacidad-datos" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                3. Datos Personales y Ley N° 29733
+            </a>
+            <a href="#notificaciones" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                4. Permiso de Notificaciones
+            </a>
+            <a href="#autenticacion" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                5. Autenticación y Google Sign-In
+            </a>
+            <a href="#multicaja" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                6. Arquitectura Multi-Caja y Empleados
+            </a>
+            <a href="#suscripciones" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                7. Suscripciones y Facturación
+            </a>
+            <a href="#seguridad" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                8. Seguridad Técnica y Encriptación
+            </a>
+            <a href="#derechos-arco" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                9. Derechos ARCO y Eliminación
+            </a>
+            <a href="#responsabilidad" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                10. Límites de Responsabilidad
+            </a>
+            <a href="#conducta" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                11. Usos Prohibidos y Propiedad
+            </a>
+            <a href="#contacto" class="index-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                12. Canales Oficiales de Contacto
+            </a>
+        </div>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <h2 id="objeto">
+        <span class="section-num">1</span>
+        Naturaleza, Descripción y Objeto del Servicio
+    </h2>
+    <p>Brynn es una suite tecnológica orientada a pequeños, medianos y grandes comerciantes, emprendimientos, tiendas comerciales y restaurantes. Su finalidad primordial consiste en optimizar los procesos de verificación de cobros digitales y minimizar el riesgo de fraude comercial por capturas adulteradas.</p>
+    <p>Las prestaciones centrales provistas por el Software comprenden:</p>
     <ul>
-        <li>La aplicación analiza en tiempo real las notificaciones recibidas de aplicaciones de billeteras digitales (como Yape o Plin) para detectar la confirmación de un pago entrante.</li>
-        <li>Al detectar un cobro, la aplicación convierte el monto y el nombre del cliente en voz alta mediante el sintetizador de voz (TTS) para alertar al comerciante y evitar estafas.</li>
-        <li><strong>Exclusión total de mensajes personales:</strong> Brynn <strong>NUNCA</strong> lee, almacena, analiza ni transmite notificaciones de mensajes personales, chats privados (WhatsApp, Telegram, SMS), correos electrónicos ni de ninguna aplicación ajena a las billeteras de pago soportadas.</li>
+        <li><strong>Anuncio auditivo automatizado (Text-to-Speech):</strong> Detección en tiempo real de notificaciones locales de pago recibidas en el teléfono del comerciante para su lectura inmediata y en voz alta mediante el sintetizador del sistema, amplificable a través de altavoces o parlantes vinculados por Bluetooth o cable de audio auxiliar.</li>
+        <li><strong>Prevención de estafas por capturas de pantalla falsas:</strong> El comerciante y sus colaboradores no requieren inspeccionar pantallas de celulares de compradores ni validar comprobantes impresos o capturas de pantalla propensas a edición digital, dado que la alerta se fundamenta exclusivamente en la notificación genuina recibida en el propio terminal.</li>
+        <li><strong>Sincronización multi-caja en tiempo real:</strong> Enlace instantáneo entre el dispositivo del Dueño (emisor) y los dispositivos de sus empleados, colaboradores o cajeros (receptores), permitiendo que todos escuchen la confirmación de la venta de forma simultánea.</li>
+        <li><strong>Panel estadístico y exportación de ventas:</strong> Agrupación automática de montos recaudados, métricas por turno, totales diarios y exportación de resúmenes en formatos estándar para contabilidad del negocio.</li>
     </ul>
 
-    <h2>3. Servicios de Terceros</h2>
-    <p>La aplicación utiliza proveedores externos de infraestructura de confianza para su correcto funcionamiento:</p>
+    <!-- SECTION 2 -->
+    <h2 id="deslinde">
+        <span class="section-num">2</span>
+        Deslinde de Responsabilidad Financiera e Independencia de Marcas
+    </h2>
+    <div class="callout-box danger">
+        <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="#FF4D5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+        <p><strong>Aviso Regulatorio y Financiero Crítico:</strong> Brynn no es un banco, pasarela de pagos, procesador de liquidaciones, emisor de dinero electrónico ni entidad de intermediación financiera sujeta a supervisión de la SBS o entes análogos. Brynn jamás custodia fondos, no efectúa cobros directos sobre cuentas bancarias ni participa en la transferencia monetaria entre partes.</p>
+    </div>
+    <p>En estricto cumplimiento de las directrices de propiedad industrial y políticas de plataformas digitales:</p>
     <ul>
-        <li><strong>Supabase:</strong> Para el almacenamiento seguro en la nube de cuentas de usuario, configuración de sucursales e historial de ventas del negocio.</li>
-        <li><strong>Firebase Cloud Messaging (Google FCM):</strong> Para transmitir en tiempo real la confirmación de cobro desde el dispositivo receptor hacia las sucursales vinculadas.</li>
-        <li><strong>RevenueCat & Google Play Billing:</strong> Para el procesamiento seguro de pagos de suscripciones (mensuales y anuales). Los datos bancarios y de tarjetas de crédito son procesados directamente por Google Play y nunca pasan por nuestros servidores.</li>
+        <li><strong>Independencia total de entidades bancarias:</strong> Brynn es una aplicación desarrollada de manera enteramente autónoma e independiente. No guarda afiliación, patrocinio, asociación, alianza estratégica ni respaldo oficial alguno por parte de <strong>Yape</strong>, <strong>Banco de Crédito del Perú (BCP)</strong>, <strong>Plin</strong>, <strong>Interbank</strong>, <strong>BBVA Perú</strong>, <strong>Scotiabank</strong>, <strong>Banco de la Nación</strong> o cualquier otra institución bancaria o financiera.</li>
+        <li><strong>Uso nominativo de marcas:</strong> Toda referencia a marcas comerciales, logotipos o nombres de servicios de terceros se efectúa con propósitos puramente descriptivos e informativos para indicar compatibilidad de software con el ecosistema de billeteras del mercado peruano, permaneciendo la titularidad exclusiva en sus legítimos propietarios.</li>
     </ul>
 
-    <h2>4. Seguridad y Almacenamiento de Datos</h2>
-    <p>Implementamos medidas de seguridad técnicas e híbridas (cifrado SSL/TLS en tránsito y políticas de seguridad a nivel de fila RLS en la base de datos) para asegurar que el historial de transacciones de tu tienda únicamente sea accesible por el propietario de la tienda y sus trabajadores autorizados.</p>
+    <!-- SECTION 3 -->
+    <h2 id="privacidad-datos">
+        <span class="section-num">3</span>
+        Política de Privacidad y Tratamiento de Datos Personales (Ley N° 29733)
+    </h2>
+    <p>En observancia de la <strong>Ley N° 29733 (Ley de Protección de Datos Personales de la República del Perú)</strong>, su Reglamento aprobado por D.S. 003-2013-JUS, y estándares internacionales de protección y confidencialidad de la información, Brynn garantiza que todo tratamiento de datos personales se rige por los principios de legalidad, consentimiento, finalidad, proporcionalidad, calidad, seguridad y disposición de recursos.</p>
 
-    <h2>5. Retención y Eliminación de Datos</h2>
-    <p>Conservamos tu información mientras mantengas una cuenta activa en la aplicación. Puedes solicitar la eliminación total de tu cuenta y de todo el historial de transacciones en cualquier momento enviando un correo a nuestro equipo de soporte.</p>
-
-    <h2>6. Privacidad de Menores</h2>
-    <p>Nuestra aplicación está orientada a comerciantes, emprendedores y usuarios con edad legal para realizar actividades comerciales (mayores de 18 años o mayores de 13 con supervisión). No recopilamos conscientemente información de menores de 13 años.</p>
-
-    <h2>7. Contacto</h2>
-    <p>Si tienes preguntas, dudas o solicitudes relacionadas con esta Política de Privacidad o el tratamiento de tus datos, puedes contactarnos en:</p>
+    <h3>3.1. Categorías de Datos Recolectados</h3>
+    <p>Brynn recopila únicamente los datos estrictamente necesarios para operar las cuentas y prestaciones contratadas:</p>
     <ul>
-        <li><strong>Correo electrónico de soporte:</strong> <a href="mailto:soporte.brynn@gmail.com" style="color: var(--accent-color);">soporte.brynn@gmail.com</a></li>
-        <li><strong>Desarrollador:</strong> Equipo de Desarrollo de Brynn</li>
+        <li><strong>Datos identificativos de cuenta:</strong> Correo electrónico verificado, identificador de usuario único (UUID), nombre o alias de comerciante, contraseña almacenada bajo algoritmos de cifrado irreversible (hashing) y token de autenticación.</li>
+        <li><strong>Datos de configuración de comercio:</strong> Denominación comercial o nombre del local, sucursales asignadas, códigos de enlace de empleados y preferencias de audio (volumen, tono, plantilla de voz TTS).</li>
+        <li><strong>Datos operativos de cobro anunciado:</strong> Monto registrado en la notificación, nombre o alias del ordenante que figure en la alerta de pago, marca temporal (fecha/hora) y estado de entrega de audio en los nodos receptores.</li>
+        <li><strong>Datos de diagnóstico y rendimiento técnico:</strong> Registros anónimos de fallos (crash reports), versión del sistema operativo Android, modelo de dispositivo y estado de conexión a internet para soporte técnico.</li>
     </ul>
 
-    <div class="footer">
-        <p><a href="/privacy">Política de Privacidad</a> | <a href="/terms">Condiciones del Servicio</a></p>
+    <h3>3.2. Datos Estricta y Categóricamente NO Recopilados</h3>
+    <div class="callout-box lime">
+        <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="#CCFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+        </svg>
+        <p><strong>Garantía de Privacidad Financiera Absoluta:</strong> Brynn NUNCA solicita, no lee, no almacena ni posee acceso técnico a números de tarjetas de crédito o débito, códigos CVV/CVC, claves personales de cajero, contraseñas bancarias de internet, saldos totales de cuenta bancaria ni tokens digitales de seguridad de tu banco.</p>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2 id="notificaciones">
+        <span class="section-num">4</span>
+        Declaración Especial: Permiso de Escucha de Notificaciones
+    </h2>
+    <p>Para desempeñar su rol medular de parlante de cobros, Brynn solicita al usuario la activación manual en Android del permiso <code>NotificationListenerService</code> (Servicio de Escucha de Notificaciones). En conformidad con las directrices de <strong>Google Play Developer Policy</strong> referentes a datos confidenciales del dispositivo:</p>
+    <ul>
+        <li><strong>Finalidad esencial y exclusiva:</strong> El acceso a notificaciones se utiliza con el único y exclusivo propósito de detectar en tiempo real la confirmación visual de transacciones emitidas por las aplicaciones de billeteras móviles que el propio comerciante seleccione explícitamente en el panel de configuración de la app.</li>
+        <li><strong>Filtrado por paquete de software:</strong> El motor interno de Brynn aplica filtros herméticos a nivel de proceso para procesar exclusivamente los paquetes de software bancario habilitados.</li>
+        <li><strong>Exclusión total de comunicaciones privadas:</strong> Brynn <strong>NO lee, NO procesa, NO almacena ni transmite</strong> bajo ninguna circunstancia notificaciones de mensajería instantánea (WhatsApp, Telegram, Messenger, Signal), mensajes SMS, correos electrónicos, llamadas telefónicas, redes sociales ni notificaciones de ninguna otra aplicación instalada en el teléfono.</li>
+        <li><strong>Procesamiento en memoria local:</strong> El análisis de texto de la notificación para la síntesis de voz se procesa localmente en el dispositivo del usuario antes de emitir la lectura de audio.</li>
+    </ul>
+
+    <!-- SECTION 5 -->
+    <h2 id="autenticacion">
+        <span class="section-num">5</span>
+        Autenticación de Usuarios y Políticas de Google Sign-In
+    </h2>
+    <p>Brynn permite la creación y acceso a cuentas de usuario mediante autenticación directa con correo/contraseña o a través de los servicios de <strong>Google Sign-In</strong> provistos por Google LLC.</p>
+    <p>El tratamiento de datos derivado del uso de las APIs de Google cumple taxativamente con la <em>Google API Services User Data Policy</em> (incluidos los requisitos de Uso Limitado):</p>
+    <ul>
+        <li>Únicamente se acceden a los alcances básicos de perfil público: nombre, dirección de correo electrónico identificatoria y fotografía de perfil para visualización en la cabecera de la app.</li>
+        <li>Dicha información jamás es comercializada, compartida con agencias de publicidad digital, transferida a corredores de datos ni empleada para perfilamiento crediticio o de anuncios segmentados.</li>
+        <li>Las solicitudes de restablecimiento de contraseña para cuentas basadas en credenciales de correo se ejecutan mediante enlaces criptográficos únicos que expiran a los 60 minutos de emisión para neutralizar intentos de usurpación de identidad.</li>
+    </ul>
+
+    <!-- SECTION 6 -->
+    <h2 id="multicaja">
+        <span class="section-num">6</span>
+        Arquitectura Multi-Caja, Sucursales y Enlace de Empleados
+    </h2>
+    <p>La modalidad multi-caja de Brynn faculta al Dueño del negocio a expandir el alcance auditivo de sus cobros hacia sus colaboradores:</p>
+    <ul>
+        <li><strong>Código de vinculación seguro:</strong> La vinculación se efectúa mediante códigos efímeros de 6 dígitos autogenerados por la cuenta Dueño. Dicho código autoriza al dispositivo empleado a conectarse en calidad exclusiva de "Receptor de Audio".</li>
+        <li><strong>Principio de mínimo privilegio para cajeros:</strong> El rol Receptor únicamente recibe el audio de confirmación de cobro emitido por la tienda. El empleado no tiene acceso a la gestión de suscripciones, eliminación de sucursales ni modificación de credenciales de la tienda.</li>
+        <li><strong>Revocación inmediata de acceso:</strong> El Dueño puede en todo momento desvincular, desautorizar o desconectar terminales de empleados con un solo clic desde el panel de sucursales de la aplicación.</li>
+        <li><strong>Trasmisión protegida vía Firebase Cloud Messaging (Google FCM):</strong> La señal de sincronización entre el teléfono del dueño y las cajas receptoras se enruta de forma cifrada mediante la infraestructura de nube de Google FCM.</li>
+    </ul>
+
+    <!-- SECTION 7 -->
+    <h2 id="suscripciones">
+        <span class="section-num">7</span>
+        Planes, Suscripciones y Facturación (Google Play Billing)
+    </h2>
+    <p>Brynn distribuye modalidades de acceso gratuitas y modalidades Premium avanzadas sujetas a suscripción periódica (mensual o anual):</p>
+    <ul>
+        <li><strong>Pasarela oficial de pago:</strong> Toda transacción monetaria, cobro periódico y actualización de planes se procesa de forma mandataria a través de la infraestructura oficial de <strong>Google Play Billing</strong>, gestionada operacionalmente junto con <strong>RevenueCat</strong>.</li>
+        <li><strong>Renovación automática:</strong> Toda suscripción se renueva de forma automática al vencimiento de cada periodo de facturación acordado, salvo que el usuario cancele la suscripción con al menos 24 horas de antelación respecto al fin del ciclo en curso.</li>
+        <li><strong>Cancelación a criterio del usuario:</strong> El suscriptor puede cancelar o modificar su plan en cualquier instante desde el menú de <em>Suscripciones de Google Play Store</em> en su dispositivo Android o desde el Centro de Gestión en los ajustes de Brynn. La cancelación detendrá cobros futuros, manteniendo el acceso Premium activo hasta la conclusión del periodo pre-pagado.</li>
+        <li><strong>Reembolsos:</strong> Las solicitudes de devolución se encuentran sujetas a las políticas contractuales de reembolso vigentes de Google Play Store.</li>
+    </ul>
+
+    <!-- SECTION 8 -->
+    <h2 id="seguridad">
+        <span class="section-num">8</span>
+        Medidas de Seguridad Técnica y Almacenamiento Cifrado
+    </h2>
+    <p>Adoptamos protocolos de ciberseguridad proporcionales a las mejores prácticas de la industria de software:</p>
+    <ul>
+        <li><strong>Cifrado en tránsito y en reposo:</strong> Todo flujo de datos entre la app móvil, el portal web y los servidores en la nube se transmite obligatoriamente bajo canales cifrados TLS 1.3 con certificados SSL vigentes.</li>
+        <li><strong>Seguridad a nivel de fila (Row Level Security - RLS):</strong> Las bases de datos implementadas en Supabase imponen políticas criptográficas y de control de acceso por token JWT que impiden estrictamente que un negocio acceda o visualice los cobros, reportes o identificadores de otro comercio.</li>
+        <li><strong>Infraestructura redundante:</strong> Los servidores cuentan con monitoreo automatizado, protección perimetral contra ataques de denegación de servicio (DDoS) y copias de respaldo continuas.</li>
+    </ul>
+
+    <!-- SECTION 9 -->
+    <h2 id="derechos-arco">
+        <span class="section-num">9</span>
+        Derechos ARCO y Procedimiento de Eliminación Definitiva de Cuenta
+    </h2>
+    <p>En aplicación de la Ley N° 29733 y las exigencias de transparencia de Google Play, todo titular de datos tiene expeditos sus derechos de <strong>Acceso, Rectificación, Cancelación y Oposición (Derechos ARCO)</strong>:</p>
+    <ul>
+        <li><strong>Formulario web directo:</strong> Ponemos a disposición la página pública y accesible <a href="/delete-account" style="color: var(--accent-lime); font-weight: 700;">/delete-account</a>, donde cualquier usuario puede solicitar el borrado integral e irrevocable de su cuenta sin requerir tener la app instalada.</li>
+        <li><strong>Alcance de la eliminación:</strong> Al procesar la cancelación de cuenta, se eliminan permanentemente de nuestros servidores las credenciales de acceso, correos, nombres de tienda, sucursales conectadas, terminales enlazadas y todo el histórico de transacciones anunciado.</li>
+        <li><strong>Plazo de respuesta:</strong> Las solicitudes remitidas vía formulario o al correo oficial de soporte son atendidas en un plazo máximo no mayor a <strong>24 a 48 horas hábiles</strong>.</li>
+    </ul>
+
+    <!-- SECTION 10 -->
+    <h2 id="responsabilidad">
+        <span class="section-num">10</span>
+        Garantías, Disponibilidad y Límites de Responsabilidad
+    </h2>
+    <p>El Software se suministra en modalidad <em>"tal cual"</em> (as is) y <em>"según disponibilidad"</em>:</p>
+    <ul>
+        <li><strong>Factores externos al software:</strong> Brynn no asume responsabilidad por la falta de emisión de alertas de audio que tengan su origen en fallas de la red telefónica o de internet del usuario, cortes de energía eléctrica, batería agotada del terminal, desconexión del altavoz Bluetooth externo, desactivación involuntaria de permisos en Android por optimizadores de batería agresivos del fabricante del equipo, o caídas generales en las plataformas de Yape, Plin o los respectivos bancos.</li>
+        <li><strong>Deber de diligencia del comerciante:</strong> El comerciante reconoce que Brynn es una herramienta auxiliar de asistencia en punto de venta. Para transacciones de alta cuantía inusual, se sugiere contrastar la transacción en la cuenta bancaria de respaldo.</li>
+    </ul>
+
+    <!-- SECTION 11 -->
+    <h2 id="conducta">
+        <span class="section-num">11</span>
+        Usos Prohibidos, Conducta del Usuario y Propiedad Intelectual
+    </h2>
+    <p>Queda terminantemente prohibido a todo usuario o tercero:</p>
+    <ul>
+        <li>Emplear la Aplicación para consumar actividades ilícitas, maniobras fraudulentas, lavado de activos o vulneración de los derechos de consumidores y terceros.</li>
+        <li>Someter el código binario de Brynn a ingeniería inversa, desensamblado, descompilación, clonación de interfaz o derivación no autorizada de código fuente.</li>
+        <li>Utilizar robots, scripts automatizados o mecanismos de scraping contra las APIs o servicios web del Software.</li>
+        <li>Todos los derechos de autor, patentes en trámite, marcas comerciales, isotipos, audios y elementos visuales de Brynn pertenecen con exclusividad a sus desarrolladores titulares.</li>
+    </ul>
+
+    <!-- SECTION 12 -->
+    <h2 id="contacto">
+        <span class="section-num">12</span>
+        Modificaciones, Jurisdicción y Canales Oficiales de Contacto
+    </h2>
+    <p>Nos reservamos la facultad de modificar o actualizar este documento legal para adecuarlo a mejoras tecnológicas, nuevas prestaciones de la app o reformas normativas. La versión actualizada se publicará de manera inmediata en el portal web indicando la fecha de última revisión. El uso continuado del Servicio luego de cualquier enmienda constituirá aceptación plena de las modificaciones.</p>
+    <p>Para la resolución de cualquier divergencia derivada de la interpretación o ejecución de este acuerdo, las partes se someten a la legislación sustantiva de la <strong>República del Perú</strong> y a la jurisdicción de los jueces y tribunales del distrito judicial de Lima Cercado.</p>
+    
+    <div class="callout-box lime">
+        <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="#CCFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <p><strong>Atención al Comerciante y Soporte Técnico:</strong><br>
+        Correo electrónico institucional: <a href="mailto:soporte.brynn@gmail.com" style="color: var(--accent-lime); font-weight: 700;">soporte.brynn@gmail.com</a><br>
+        Portal Web Oficial: <a href="https://brynnapp.vercel.app" style="color: var(--accent-lime); font-weight: 700;">https://brynnapp.vercel.app</a><br>
+        Atención directa por WhatsApp: Disponible a través del widget interactivo en la landing page.
+        </p>
+    </div>
+
+    <div class="legal-footer">
+        <div class="legal-footer-links">
+            <a href="/">Inicio</a>
+            <a href="/terms">Términos y Condiciones</a>
+            <a href="/privacy">Política de Privacidad</a>
+            <a href="/delete-account">Eliminación de Cuenta</a>
+            <a href="/reset-password">Recuperar Contraseña</a>
+        </div>
         <p>© 2026 Brynn - Parlante de Pagos. Todos los derechos reservados.</p>
     </div>
 </div>
