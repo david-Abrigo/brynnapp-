@@ -8,13 +8,14 @@
     <link rel="icon" type="image/png" href="logo-app.png">
     <style>
         :root {
-            --bg-color: #0d0f12;
-            --card-bg: #15181e;
-            --card-border: #222631;
-            --accent: #a6ff00;
-            --accent-glow: rgba(166, 255, 0, 0.25);
-            --text-main: #f3f4f6;
-            --text-sub: #9ca3af;
+            --bg-color: #F0F1F7;
+            --card-bg: #FFFFFF;
+            --card-border: #E5E7EF;
+            --accent: #4B0DCA;
+            --accent-lime: #C8F135;
+            --accent-glow: rgba(75, 13, 202, 0.15);
+            --text-main: #111827;
+            --text-sub: #6B7280;
         }
         * {
             box-sizing: border-box;
@@ -41,7 +42,7 @@
             gap: 12px;
             font-size: 22px;
             font-weight: 800;
-            color: #ffffff;
+            color: var(--text-main);
             text-decoration: none;
         }
         .logo-box span {
@@ -72,25 +73,24 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(166, 255, 0, 0.1);
+            background: rgba(75, 13, 202, 0.08);
             color: var(--accent);
             padding: 6px 16px;
             border-radius: 999px;
             font-size: 13px;
             font-weight: 700;
             margin-bottom: 24px;
-            border: 1px solid rgba(166, 255, 0, 0.25);
+            border: 1px solid rgba(75, 13, 202, 0.2);
         }
         h1 {
             font-size: clamp(32px, 5vw, 54px);
             font-weight: 900;
             line-height: 1.15;
             margin-bottom: 20px;
-            color: #ffffff;
+            color: var(--text-main);
         }
         h1 span {
             color: var(--accent);
-            text-shadow: 0 0 25px var(--accent-glow);
         }
         .hero p {
             font-size: 18px;
@@ -103,7 +103,7 @@
             align-items: center;
             gap: 10px;
             background: var(--accent);
-            color: #0d0f12;
+            color: #ffffff;
             padding: 14px 28px;
             border-radius: 14px;
             font-size: 16px;
@@ -114,7 +114,7 @@
         }
         .cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(166, 255, 0, 0.4);
+            box-shadow: 0 6px 28px rgba(75, 13, 202, 0.35);
         }
         .features {
             max-width: 1100px;
@@ -129,10 +129,12 @@
             border: 1px solid var(--card-border);
             padding: 32px 24px;
             border-radius: 18px;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .feature-card:hover {
             border-color: var(--accent);
+            box-shadow: 0 8px 24px var(--accent-glow);
         }
         .feature-icon {
             font-size: 32px;
@@ -141,7 +143,7 @@
         .feature-card h3 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: var(--text-main);
         }
         .feature-card p {
             color: var(--text-sub);
@@ -151,19 +153,28 @@
             max-width: 1060px;
             margin: 40px auto 80px;
             padding: 40px 30px;
-            background: linear-gradient(135deg, #15181e 0%, #1e2417 100%);
-            border: 1px solid var(--accent);
+            background: linear-gradient(135deg, var(--accent) 0%, #6D28D9 100%);
+            border: none;
             border-radius: 20px;
             text-align: center;
         }
         .banner h2 {
             font-size: 28px;
             margin-bottom: 12px;
+            color: #ffffff;
         }
         .banner p {
-            color: var(--text-sub);
+            color: rgba(255,255,255,0.82);
             max-width: 600px;
             margin: 0 auto 24px;
+        }
+        .banner .cta-btn {
+            background: var(--accent-lime);
+            color: #111827;
+            box-shadow: 0 4px 20px rgba(200, 241, 53, 0.4);
+        }
+        .banner .cta-btn:hover {
+            box-shadow: 0 6px 28px rgba(200, 241, 53, 0.6);
         }
         footer {
             border-top: 1px solid var(--card-border);
@@ -177,11 +188,15 @@
             justify-content: center;
             gap: 24px;
             margin-bottom: 16px;
+            flex-wrap: wrap;
         }
         .footer-links a {
-            color: var(--text-main);
+            color: var(--text-sub);
             text-decoration: none;
             transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--accent);
         }
         /* FAQ Section */
         .faq-section {
@@ -196,7 +211,7 @@
         .faq-header h2 {
             font-size: 32px;
             font-weight: 800;
-            color: #ffffff;
+            color: var(--text-main);
             margin-bottom: 8px;
         }
         .faq-header p {
@@ -213,15 +228,17 @@
             border: 1px solid var(--card-border);
             border-radius: 16px;
             padding: 24px;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .faq-card:hover {
             border-color: var(--accent);
+            box-shadow: 0 8px 24px var(--accent-glow);
         }
         .faq-q {
             font-size: 16px;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--text-main);
             margin-bottom: 10px;
             display: flex;
             align-items: center;
@@ -263,8 +280,8 @@
         .wa-tooltip {
             position: absolute;
             right: 72px;
-            background: #15181e;
-            color: #ffffff;
+            background: var(--card-bg);
+            color: var(--text-main);
             border: 1px solid var(--card-border);
             padding: 8px 14px;
             border-radius: 10px;
@@ -275,7 +292,7 @@
             opacity: 0;
             transform: translateX(10px);
             transition: all 0.2s ease;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
         }
         .wa-float:hover .wa-tooltip {
             opacity: 1;
