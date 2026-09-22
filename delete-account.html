@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminación de Cuenta y Datos - Brynn: Parlante de Pagos</title>
+    <meta name="description" content="Solicitud oficial de eliminación de cuenta y borrado de datos de usuario para la aplicación Brynn - Parlante de Pagos.">
+    <link rel="icon" type="image/png" href="logo-app.png">
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --card-bg: #15181e;
+            --card-border: #222631;
+            --accent: #a6ff00;
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+            --danger: #ef4444;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+        }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .nav-back:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        p {
+            color: var(--text-sub);
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 8px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--text-sub);
+            font-size: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: var(--text-main);
+        }
+        .danger-box {
+            background: rgba(239, 68, 68, 0.08);
+            border-left: 4px solid var(--danger);
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 24px 0;
+        }
+        .danger-box p {
+            color: #fca5a5;
+            margin: 0;
+            font-size: 14px;
+        }
+        .form-card {
+            background: #0d0f12;
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 14px;
+            background: #15181e;
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 14px;
+            outline: none;
+        }
+        input:focus, textarea:focus {
+            border-color: var(--danger);
+        }
+        .btn-delete {
+            width: 100%;
+            padding: 14px;
+            background: var(--danger);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .btn-delete:hover {
+            opacity: 0.9;
+        }
+        .btn-delete:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .success-msg {
+            display: none;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #34d399;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-top: 16px;
+            text-align: center;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-sub);
+            border-top: 1px solid var(--card-border);
+            padding-top: 20px;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="/" class="nav-back">← Volver al inicio</a>
+    <br>
+    <div class="badge">POLÍTICA Y PROCEDIMIENTO DE ELIMINACIÓN</div>
+    <h1>Solicitud de Eliminación de Cuenta y Datos</h1>
+    <p>En <strong>Brynn - Parlante de Pagos</strong> respetamos tu derecho a la privacidad y el control total sobre tus datos personales. Conforme a las políticas de seguridad de datos de <strong>Google Play Store</strong>, puedes solicitar la eliminación permanente de tu cuenta y de toda la información asociada en cualquier momento.</p>
+
+    <h2>1. ¿Qué datos se eliminan permanentemente?</h2>
+    <p>Al procesarse tu solicitud de eliminación, se borrarán de forma irreversible de nuestros servidores:</p>
+    <ul>
+        <li><strong>Información de perfil:</strong> Tu nombre completo, correo electrónico, contraseña cifrada y número de WhatsApp.</li>
+        <li><strong>Datos de tu negocio:</strong> Nombre de la tienda, configuración de cajas y terminales de sucursal.</li>
+        <li><strong>Historial de transacciones:</strong> Todo registro de montos recibidos, nombres de clientes y reportes de cobros acumulados.</li>
+        <li><strong>Vínculos de empleados:</strong> Todos los receptores o trabajadores vinculados a tu tienda perderán el acceso de inmediato.</li>
+    </ul>
+
+    <div class="danger-box">
+        <p><strong>⚠️ Advertencia:</strong> Esta acción es definitiva. Una vez eliminada tu cuenta, no podrás recuperar el historial de ventas de tu negocio ni restaurar las cajas sincronizadas.</p>
+    </div>
+
+    <h2>2. Formulario de Solicitud en Línea</h2>
+    <p>Completa este formulario con el correo electrónico con el que te registraste en la aplicación. Tu solicitud será procesada en un plazo máximo de <strong>24 a 48 horas hábiles</strong>.</p>
+
+    <div class="form-card">
+        <form id="deleteForm" onsubmit="submitDeletionRequest(event)">
+            <div class="form-group">
+                <label for="userEmail">Correo electrónico de tu cuenta registrada *</label>
+                <input type="email" id="userEmail" required placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Motivo de eliminación (Opcional)</label>
+                <select id="reason">
+                    <option value="no_uso">Ya no utilizo la aplicación</option>
+                    <option value="cambio_negocio">Cerré o cambié de negocio</option>
+                    <option value="privacidad">Preocupaciones de privacidad</option>
+                    <option value="otro">Otro motivo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comentarios adicionales</label>
+                <textarea id="comments" rows="3" placeholder="Cuéntanos en qué podemos mejorar..."></textarea>
+            </div>
+
+            <button type="submit" id="deleteBtn" class="btn-delete">Confirmar y Solicitar Eliminación Definitiva</button>
+        </form>
+
+        <div id="successMsg" class="success-msg">
+            ✅ <strong>Solicitud recibida con éxito.</strong><br>
+            Hemos registrado tu solicitud de eliminación para tu cuenta. Se procesará el borrado completo de tus datos y te enviaremos una notificación de confirmación.
+        </div>
+    </div>
+
+    <h2>3. Solicitud directa por correo electrónico</h2>
+    <p>Si lo prefieres, también puedes enviar un correo electrónico directo desde la cuenta asociada a:</p>
+    <ul>
+        <li><strong>Correo de soporte:</strong> <a href="mailto:soporte.brynn@gmail.com" style="color: var(--accent);">soporte.brynn@gmail.com</a></li>
+        <li><strong>Asunto:</strong> Solicitud de Eliminación de Cuenta - Brynn</li>
+    </ul>
+
+    <footer>
+        <p><a href="/privacy">Política de Privacidad</a> | <a href="/terms">Condiciones del Servicio</a> | <a href="/delete-account">Eliminación de Cuenta</a></p>
+        <p style="margin-top: 8px;">© 2026 Brynn - Parlante de Pagos. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+<script>
+function submitDeletionRequest(e) {
+    e.preventDefault();
+    const btn = document.getElementById('deleteBtn');
+    const form = document.getElementById('deleteForm');
+    const successMsg = document.getElementById('successMsg');
+    const email = document.getElementById('userEmail').value;
+    const reason = document.getElementById('reason').value;
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando solicitud...';
+
+    // Simular o enviar solicitud
+    setTimeout(() => {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
