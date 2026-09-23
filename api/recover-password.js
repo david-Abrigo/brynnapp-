@@ -1,9 +1,9 @@
 // Vercel Serverless Function: API Backend para Recuperación de Contraseña
 // Endpoint: POST /api/recover-password
 
-const SUPABASE_URL = "https://sljznppbjxfbgzasjnyq.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsanpucHBianhmYmd6YXNqbnlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgzOTM1NzQsImV4cCI6MjEwMzk2OTU3NH0.bIH3x2xsPjxgU0hTPWAg4IwFjKnsUW7RtdpnRM1DB1o";
-const REDIRECT_URL = "https://brynnapp.vercel.app/reset-password";
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+const REDIRECT_URL = process.env.REDIRECT_URL || "https://brynnapp.vercel.app/reset-password";
 
 export default async function handler(req, res) {
     // Configurar cabeceras CORS
@@ -23,6 +23,14 @@ export default async function handler(req, res) {
         return res.status(405).json({
             success: false,
             error: "Método no permitido. Solo se acepta POST."
+        });
+    }
+
+    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        console.error("Error crítico: Faltan variables de entorno SUPABASE_URL o SUPABASE_ANON_KEY en Vercel.");
+        return res.status(500).json({
+            success: false,
+            error: "Configuración de autenticación no disponible en el servidor."
         });
     }
 
