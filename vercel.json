@@ -7,6 +7,7 @@
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/privacy-policy", "destination": "/privacy.html" },
     { "source": "/reset-password", "destination": "/reset-password.html" },
-    { "source": "/delete-account", "destination": "/delete-account.html" }
+    { "source": "/delete-account", "destination": "/delete-account.html" },
+    { "source": "/feedback", "destination": "/#comentarios-beta" }
   ]
 }
