@@ -19,7 +19,7 @@ Para proporcionar las funciones del parlante de cobros y sincronización de vent
 
 > **Declaración de Transparencia de Google Play:** Brynn solicita acceso especial al servicio de escucha de notificaciones de Android (`NotificationListenerService`). Este permiso es estrictamente necesario para el funcionamiento principal de la aplicación.
 
-* **Objetivo:** La aplicación analiza en tiempo real las notificaciones recibidas de aplicaciones de billeteras digitales (como Yape o Plin) para detectar la confirmación de un pago entrante y anunciarlo en voz alta.
+* **Objetivo:** La aplicación analiza en tiempo real las notificaciones recibidas de la aplicación de billetera digital Yape para detectar la confirmación de un pago entrante y anunciarlo en voz alta.
 * **Privacidad de mensajes personales:** Brynn **NUNCA** lee, almacena, analiza ni transmite notificaciones de mensajes personales, chats privados (WhatsApp, Telegram, SMS), correos electrónicos ni de ninguna aplicación ajena a las billeteras de pago soportadas.
 
 ---

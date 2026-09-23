@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminación de Cuenta y Datos - Brynn: Parlante de Pagos</title>
-    <meta name="description" content="Solicitud oficial de eliminación de cuenta y borrado de datos de usuario para la aplicación Brynn - Parlante de Pagos.">
+    <meta name="description" content="Solicitud oficial de eliminación de cuenta o borrado selectivo de datos (historial de transacciones o cuenta completa) para la aplicación Brynn - Parlante de Pagos.">
     <link rel="icon" type="image/png" href="logo-app.png">
     <style>
         :root {
@@ -18,6 +18,8 @@
             --danger: #FF4D5A;
             --danger-bg: rgba(255, 77, 90, 0.08);
             --danger-border: rgba(255, 77, 90, 0.35);
+            --success: #10B981;
+            --warning: #F59E0B;
         }
         * {
             box-sizing: border-box;
@@ -102,7 +104,7 @@
             font-size: 15px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         strong {
             color: var(--text-main);
@@ -117,6 +119,7 @@
             display: flex;
             align-items: flex-start;
             gap: 12px;
+            transition: all 0.3s ease;
         }
         .danger-box svg {
             width: 20px;
@@ -130,6 +133,17 @@
             margin: 0;
             font-size: 14px;
         }
+        .info-box-yellow {
+            background: rgba(245, 158, 11, 0.08);
+            border-color: rgba(245, 158, 11, 0.35);
+            border-left-color: var(--warning);
+        }
+        .info-box-yellow svg {
+            color: var(--warning);
+        }
+        .info-box-yellow p {
+            color: #FDE68A;
+        }
         .form-card {
             background: #121724;
             border: 1px solid var(--card-border);
@@ -138,13 +152,13 @@
             margin-top: 24px;
         }
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
-        label {
+        label.field-title {
             display: block;
             font-size: 13px;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             color: var(--text-main);
         }
         input, select, textarea {
@@ -161,6 +175,87 @@
         input:focus, textarea:focus, select:focus {
             border-color: var(--danger);
         }
+
+        /* Selector de Tipo de Eliminación */
+        .scope-options {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .scope-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: #090D16;
+            border: 1px solid var(--card-border);
+            padding: 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .scope-card:hover {
+            border-color: var(--accent-purple);
+        }
+        .scope-card.selected-account {
+            border-color: var(--danger);
+            background: rgba(255, 77, 90, 0.06);
+        }
+        .scope-card.selected-history {
+            border-color: var(--warning);
+            background: rgba(245, 158, 11, 0.06);
+        }
+        .scope-card.selected-devices {
+            border-color: var(--accent-purple);
+            background: rgba(142, 130, 254, 0.06);
+        }
+        .scope-card input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--danger);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .scope-card#card-history input[type="radio"] {
+            accent-color: var(--warning);
+        }
+        .scope-card#card-devices input[type="radio"] {
+            accent-color: var(--accent-purple);
+        }
+        .scope-content h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+        .scope-content p {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin: 0;
+            line-height: 1.4;
+        }
+        .badge-pill {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: 4px;
+            margin-left: 6px;
+            text-transform: uppercase;
+        }
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.2);
+            color: #FBBF24;
+        }
+        .badge-danger {
+            background: rgba(255, 77, 90, 0.2);
+            color: #FF6B75;
+        }
+        .badge-purple {
+            background: rgba(142, 130, 254, 0.2);
+            color: #B4ACFE;
+        }
+
         .btn-delete {
             width: 100%;
             padding: 14px;
@@ -171,8 +266,14 @@
             font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            transition: opacity 0.2s, transform 0.2s;
-            margin-top: 8px;
+            transition: opacity 0.2s, transform 0.2s, background 0.3s;
+            margin-top: 10px;
+        }
+        .btn-delete.btn-warning-action {
+            background: #D97706;
+        }
+        .btn-delete.btn-purple-action {
+            background: #6366F1;
         }
         .btn-delete:hover {
             opacity: 0.92;
@@ -243,42 +344,74 @@
             <line x1="12" y1="8" x2="12" y2="12"></line>
             <line x1="12" y1="16" x2="12.01" y2="16"></line>
         </svg>
-        Política y Procedimiento de Eliminación
+        Control y Gestión de Privacidad
     </div>
-    <h1>Solicitud de Eliminación de Cuenta y Datos</h1>
-    <p>En <strong>Brynn - Parlante de Pagos</strong> respetamos tu derecho a la privacidad y el control total sobre tus datos personales. Conforme a las políticas de seguridad de datos de <strong>Google Play Store</strong>, puedes solicitar la eliminación permanente de tu cuenta y de toda la información asociada en cualquier momento.</p>
+    <h1>Solicitud de Eliminación de Cuenta o Borrado de Datos</h1>
+    <p>En <strong>Brynn - Parlante de Pagos</strong> respetamos tu derecho a la privacidad y el control total sobre tus datos personales. Conforme a las políticas de seguridad de datos de <strong>Google Play Store</strong>, puedes solicitar la eliminación permanente de tu cuenta completa o el <strong>borrado específico de tu historial de ventas</strong> sin cerrar tu cuenta.</p>
 
-    <h2>1. ¿Qué datos se eliminan permanentemente?</h2>
-    <p>Al procesarse tu solicitud de eliminación, se borrarán de forma irreversible de nuestros servidores:</p>
+    <h2>1. Opciones de Borrado: Parcial vs. Total</h2>
+    <p>Tienes a tu disposición tres opciones según tu necesidad:</p>
     <ul>
-        <li><strong>Información de perfil:</strong> Tu nombre completo, correo electrónico, contraseña cifrada y número de WhatsApp.</li>
-        <li><strong>Datos de tu negocio:</strong> Nombre de la tienda, configuración de cajas y terminales de sucursal.</li>
-        <li><strong>Historial de transacciones:</strong> Todo registro de montos recibidos, nombres de clientes y reportes de cobros acumulados.</li>
-        <li><strong>Vínculos de empleados:</strong> Todos los receptores o trabajadores vinculados a tu tienda perderán el acceso de inmediato.</li>
+        <li><strong>Opción 1: Borrado exclusivo del Historial de Transacciones (Recomendado si sigues usando la app):</strong> Se eliminan todos los registros de cobros, clientes, montos y notas de ventas pasadas. <em>Tu cuenta, tu correo, tu contraseña y tu suscripción permanecen activos</em> para que continúes operando con el contador limpio.</li>
+        <li><strong>Opción 2: Desvincular y borrar solo terminales y receptores:</strong> Se eliminan las conexiones con teléfonos de empleados o parlantes de tu tienda sin tocar tu cuenta ni tu historial de transacciones.</li>
+        <li><strong>Opción 3: Eliminación completa e irreversible de la cuenta:</strong> Se borra definitivamente tu perfil, credenciales de acceso, datos del negocio y todo el historial de cobros acumulados.</li>
     </ul>
 
-    <div class="danger-box">
+    <div class="danger-box" id="warningBox">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
             <line x1="12" y1="9" x2="12" y2="13"></line>
             <line x1="12" y1="17" x2="12.01" y2="17"></line>
         </svg>
-        <p><strong>Advertencia importante:</strong> Esta acción es definitiva. Una vez eliminada tu cuenta, no podrás recuperar el historial de ventas de tu negocio ni restaurar las cajas sincronizadas.</p>
+        <p id="warningText"><strong>Advertencia de borrado de cuenta completa:</strong> Esta acción es definitiva. Al eliminar la cuenta completa perderás el acceso a la app, tus tiendas registradas y todos los historiales sincronizados.</p>
     </div>
 
     <h2>2. Formulario de Solicitud en Línea</h2>
-    <p>Completa este formulario con el correo electrónico con el que te registraste en la aplicación. Tu solicitud será procesada en un plazo máximo de <strong>24 a 48 horas hábiles</strong>.</p>
+    <p>Selecciona el tipo de eliminación que deseas y proporciona tu correo electrónico registrado. Las solicitudes se procesan en un plazo máximo de <strong>24 a 48 horas hábiles</strong>.</p>
 
     <div class="form-card">
         <form id="deleteForm" onsubmit="submitDeletionRequest(event)">
+
             <div class="form-group">
-                <label for="userEmail">Correo electrónico de tu cuenta registrada *</label>
+                <label class="field-title">Selecciona qué datos deseas eliminar *</label>
+                <div class="scope-options">
+                    
+                    <label class="scope-card" id="card-history" onclick="selectScope('history')">
+                        <input type="radio" name="deleteScope" id="scope-history" value="history" onchange="updateScopeUI()">
+                        <div class="scope-content">
+                            <h3>Borrar ÚNICAMENTE mi historial de transacciones <span class="badge-pill badge-warning">Conserva tu cuenta</span></h3>
+                            <p>Elimina permanentemente el registro de cobros, ventas pasadas y clientes en la nube. Tu usuario, contraseña y acceso a la app siguen funcionando con normalidad.</p>
+                        </div>
+                    </label>
+
+                    <label class="scope-card selected-account" id="card-account" onclick="selectScope('account')">
+                        <input type="radio" name="deleteScope" id="scope-account" value="account" checked onchange="updateScopeUI()">
+                        <div class="scope-content">
+                            <h3>Eliminar mi cuenta completa y todos los datos asociados <span class="badge-pill badge-danger">Borrado total</span></h3>
+                            <p>Borrado definitivo de tu perfil, correo, credenciales, tienda, cajas vinculadas y todo el historial de ventas acumulado.</p>
+                        </div>
+                    </label>
+
+                    <label class="scope-card" id="card-devices" onclick="selectScope('devices')">
+                        <input type="radio" name="deleteScope" id="scope-devices" value="devices" onchange="updateScopeUI()">
+                        <div class="scope-content">
+                            <h3>Desvincular y borrar solo terminales / receptores <span class="badge-pill badge-purple">Solo dispositivos</span></h3>
+                            <p>Desconecta todos los teléfonos de trabajadores o parlantes vinculados sin tocar tu cuenta ni tu historial de transacciones.</p>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="userEmail" class="field-title">Correo electrónico registrado en la aplicación *</label>
                 <input type="email" id="userEmail" required placeholder="ejemplo@correo.com">
             </div>
 
             <div class="form-group">
-                <label for="reason">Motivo de eliminación (Opcional)</label>
+                <label for="reason" class="field-title">Motivo de la solicitud (Opcional)</label>
                 <select id="reason">
+                    <option value="limpiar_historial">Deseo limpiar o reiniciar mi historial de cobros</option>
                     <option value="no_uso">Ya no utilizo la aplicación</option>
                     <option value="cambio_negocio">Cerré o cambié de negocio</option>
                     <option value="privacidad">Preocupaciones de privacidad</option>
@@ -287,8 +420,8 @@
             </div>
 
             <div class="form-group">
-                <label for="comments">Comentarios adicionales</label>
-                <textarea id="comments" rows="3" placeholder="Cuéntanos en qué podemos mejorar..."></textarea>
+                <label for="comments" class="field-title">Comentarios o indicaciones adicionales</label>
+                <textarea id="comments" rows="3" placeholder="Si tienes alguna indicación especial sobre los datos a borrar..."></textarea>
             </div>
 
             <button type="submit" id="deleteBtn" class="btn-delete">Confirmar y Solicitar Eliminación Definitiva</button>
@@ -301,36 +434,97 @@
                 </svg>
             </div>
             <br>
-            <strong>Solicitud recibida con éxito.</strong><br>
-            Hemos registrado tu solicitud de eliminación para tu cuenta. Se procesará el borrado completo de tus datos y te enviaremos una notificación de confirmación.
+            <strong id="successTitle">Solicitud recibida con éxito.</strong><br>
+            <span id="successDescription">Hemos registrado tu solicitud para procesar el borrado de los datos indicados. Recibirás un correo de confirmación tan pronto concluya el procedimiento.</span>
         </div>
     </div>
 
     <h2>3. Solicitud directa por correo electrónico</h2>
-    <p>Si lo prefieres, también puedes enviar un correo electrónico directo desde la cuenta asociada a:</p>
+    <p>También puedes solicitar el borrado escribiendo directamente a nuestro equipo de privacidad:</p>
     <ul>
         <li><strong>Correo de soporte:</strong> <a href="mailto:soporte.brynn@gmail.com" style="color: var(--accent);">soporte.brynn@gmail.com</a></li>
-        <li><strong>Asunto:</strong> Solicitud de Eliminación de Cuenta - Brynn</li>
+        <li><strong>Asunto sugerido:</strong> <em>Solicitud de Borrado de Historial - Brynn</em> o <em>Solicitud de Eliminación de Cuenta - Brynn</em></li>
     </ul>
 
     <footer>
-        <p><a href="/terms">Términos y Privacidad</a> | <a href="/delete-account">Eliminación de Cuenta</a></p>
+        <p><a href="/terms">Términos y Privacidad</a> | <a href="/delete-account">Eliminación de Cuenta y Datos</a></p>
         <p style="margin-top: 8px;">© 2026 Brynn - Parlante de Pagos. Todos los derechos reservados.</p>
     </footer>
 </div>
 
 <script>
+function selectScope(scope) {
+    document.getElementById('scope-' + scope).checked = true;
+    updateScopeUI();
+}
+
+function updateScopeUI() {
+    const isHistory = document.getElementById('scope-history').checked;
+    const isAccount = document.getElementById('scope-account').checked;
+    const isDevices = document.getElementById('scope-devices').checked;
+
+    const cardHistory = document.getElementById('card-history');
+    const cardAccount = document.getElementById('card-account');
+    const cardDevices = document.getElementById('card-devices');
+    const warningBox = document.getElementById('warningBox');
+    const warningText = document.getElementById('warningText');
+    const deleteBtn = document.getElementById('deleteBtn');
+
+    cardHistory.className = 'scope-card' + (isHistory ? ' selected-history' : '');
+    cardAccount.className = 'scope-card' + (isAccount ? ' selected-account' : '');
+    cardDevices.className = 'scope-card' + (isDevices ? ' selected-devices' : '');
+
+    if (isHistory) {
+        warningBox.className = 'danger-box info-box-yellow';
+        warningText.innerHTML = '<strong>Aviso de borrado de historial:</strong> Solo se eliminará el registro de pagos y ventas pasadas. <em>Tu cuenta, correo y acceso a la app permanecerán completamente activos.</em>';
+        deleteBtn.className = 'btn-delete btn-warning-action';
+        deleteBtn.textContent = 'Solicitar Borrado Únicamente del Historial';
+    } else if (isDevices) {
+        warningBox.className = 'danger-box';
+        warningBox.style.background = 'rgba(99, 102, 241, 0.08)';
+        warningBox.style.borderLeftColor = '#6366F1';
+        warningBox.style.borderColor = 'rgba(99, 102, 241, 0.35)';
+        warningText.innerHTML = '<strong>Aviso de desvinculación:</strong> Se desvincularán todos los receptores y terminales asociados a tu tienda. Tu cuenta e historial de transacciones se conservan.';
+        warningText.style.color = '#C7D2FE';
+        deleteBtn.className = 'btn-delete btn-purple-action';
+        deleteBtn.textContent = 'Desvincular y Borrar Terminales';
+    } else {
+        warningBox.className = 'danger-box';
+        warningBox.style.background = '';
+        warningBox.style.borderLeftColor = '';
+        warningBox.style.borderColor = '';
+        warningText.innerHTML = '<strong>Advertencia de borrado de cuenta completa:</strong> Esta acción es definitiva. Al eliminar la cuenta completa perderás el acceso a la app, tus tiendas registradas y todos los historiales sincronizados.';
+        warningText.style.color = '';
+        deleteBtn.className = 'btn-delete';
+        deleteBtn.textContent = 'Confirmar y Solicitar Eliminación Definitiva';
+    }
+}
+
 function submitDeletionRequest(e) {
     e.preventDefault();
     const btn = document.getElementById('deleteBtn');
     const form = document.getElementById('deleteForm');
     const successMsg = document.getElementById('successMsg');
+    const successTitle = document.getElementById('successTitle');
+    const successDescription = document.getElementById('successDescription');
+    const isHistory = document.getElementById('scope-history').checked;
+    const isDevices = document.getElementById('scope-devices').checked;
 
     btn.disabled = true;
     btn.textContent = 'Enviando solicitud...';
 
     setTimeout(() => {
         form.style.display = 'none';
+        if (isHistory) {
+            successTitle.textContent = 'Solicitud de borrado de historial recibida.';
+            successDescription.textContent = 'Se procederá a borrar permanentemente el historial de transacciones de tu tienda. Tu cuenta y acceso a la app se mantendrán activos.';
+        } else if (isDevices) {
+            successTitle.textContent = 'Solicitud de desvinculación recibida.';
+            successDescription.textContent = 'Se desvincularán los terminales y receptores de tu tienda manteniendo tu cuenta y ventas intactas.';
+        } else {
+            successTitle.textContent = 'Solicitud de eliminación de cuenta recibida.';
+            successDescription.textContent = 'Se procesará el borrado completo e irreversible de tu cuenta y todos los datos asociados.';
+        }
         successMsg.style.display = 'block';
     }, 1000);
 }

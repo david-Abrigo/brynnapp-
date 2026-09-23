@@ -1,4 +1,5 @@
 # Archivos y código fuente de la App Android (se mantienen locales, no se publican a GitHub/Vercel)
+/_backup_pre_r8/
 /app/
 /gradle/
 build.gradle.kts
