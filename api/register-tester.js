@@ -19,10 +19,35 @@ export default async function handler(req, res) {
         return res.status(200).end();
     }
 
+    if (req.method === "GET") {
+        if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+            return res.status(200).json({ success: true, count: 0 });
+        }
+        try {
+            const countEndpoint = `${SUPABASE_URL}/rest/v1/beta_testers?select=id`;
+            const resp = await fetch(countEndpoint, {
+                headers: {
+                    "apikey": SUPABASE_SERVICE_ROLE_KEY,
+                    "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+                    "Range": "0-0",
+                    "Prefer": "count=exact"
+                }
+            });
+            const contentRange = resp.headers.get("content-range");
+            const total = contentRange ? parseInt(contentRange.split("/")[1], 10) : 0;
+            return res.status(200).json({
+                success: true,
+                count: isNaN(total) ? 0 : total
+            });
+        } catch (e) {
+            return res.status(200).json({ success: true, count: 0 });
+        }
+    }
+
     if (req.method !== "POST") {
         return res.status(405).json({
             success: false,
-            error: "Método no permitido. Solo se acepta POST."
+            error: "Método no permitido. Solo se acepta POST o GET."
         });
     }
 
@@ -55,30 +80,59 @@ export default async function handler(req, res) {
             });
         }
 
-        const record = {
-            name,
+        const testerRecord = {
             email,
-            feedback_type: "tester_signup",
-            rating: 5,
-            device_model: body?.device || "Google Play Tester",
-            message: `Solicitud de acceso a prueba interna Google Play para: ${email}`,
-            created_at: new Date().toISOString()
+            name,
+            device_model: body?.device || body?.device_model || "Web Form",
+            status: "PENDING",
+            updated_at: new Date().toISOString()
         };
 
-        // Si Supabase está disponible, registrar en beta_feedback o beta_testers
+        // Si Supabase está disponible, registrar en la tabla 'beta_testers'
         if (SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY) {
             try {
-                const supabaseEndpoint = `${SUPABASE_URL}/rest/v1/beta_feedback`;
-                await fetch(supabaseEndpoint, {
+                // Upsert por email para actualizar si ya existía o insertar si es nuevo
+                const supabaseEndpoint = `${SUPABASE_URL}/rest/v1/beta_testers?on_conflict=email`;
+                const response = await fetch(supabaseEndpoint, {
                     method: "POST",
                     headers: {
                         "apikey": SUPABASE_SERVICE_ROLE_KEY,
                         "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
                         "Content-Type": "application/json",
-                        "Prefer": "return=minimal"
+                        "Prefer": "resolution=merge-duplicates,return=minimal"
                     },
-                    body: JSON.stringify([record])
+                    body: JSON.stringify([testerRecord])
                 });
+
+                if (!response.ok) {
+                    const errTxt = await response.text();
+                    console.warn("Aviso: Supabase beta_testers devolvió error (posiblemente falta ejecutar migración):", errTxt);
+
+                    // Fallback a beta_feedback por seguridad para no perder el registro
+                    try {
+                        const fallbackRecord = {
+                            name,
+                            email,
+                            feedback_type: "tester_signup",
+                            rating: 5,
+                            device_model: body?.device || "Google Play Tester",
+                            message: `Solicitud de acceso a prueba interna Google Play para: ${email}`,
+                            created_at: new Date().toISOString()
+                        };
+                        await fetch(`${SUPABASE_URL}/rest/v1/beta_feedback`, {
+                            method: "POST",
+                            headers: {
+                                "apikey": SUPABASE_SERVICE_ROLE_KEY,
+                                "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+                                "Content-Type": "application/json",
+                                "Prefer": "return=minimal"
+                            },
+                            body: JSON.stringify([fallbackRecord])
+                        });
+                    } catch (fbErr) {
+                        console.warn("Fallback a beta_feedback falló:", fbErr.message);
+                    }
+                }
             } catch (dbErr) {
                 console.warn("Aviso al guardar tester en Supabase:", dbErr.message);
             }

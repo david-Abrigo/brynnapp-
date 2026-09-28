@@ -2,12 +2,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/beta", "destination": "/beta.html" },
+    { "source": "/probar-beta", "destination": "/beta.html" },
+    { "source": "/testers", "destination": "/beta.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/terms-of-service", "destination": "/terms.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/privacy-policy", "destination": "/privacy.html" },
     { "source": "/reset-password", "destination": "/reset-password.html" },
     { "source": "/delete-account", "destination": "/delete-account.html" },
-    { "source": "/feedback", "destination": "/#comentarios-beta" }
+    { "source": "/feedback", "destination": "/beta.html" }
   ]
 }
