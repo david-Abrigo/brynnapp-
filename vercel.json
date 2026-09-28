@@ -15,6 +15,9 @@
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/articulos", "destination": "/blog.html" },
     { "source": "/blog/yape-falso-como-saber-si-te-pagaron", "destination": "/blog/yape-falso-como-saber-si-te-pagaron.html" },
-    { "source": "/blog/yape-falso-como-saber-si-de-verdad-te-pagaron", "destination": "/blog/yape-falso-como-saber-si-te-pagaron.html" }
+    { "source": "/blog/yape-falso-como-saber-si-de-verdad-te-pagaron", "destination": "/blog/yape-falso-como-saber-si-te-pagaron.html" },
+    { "source": "/blog/parlante-para-yape-que-es-y-como-funciona", "destination": "/blog/parlante-para-yape-que-es-y-como-funciona.html" },
+    { "source": "/blog/parlante-para-yape", "destination": "/blog/parlante-para-yape-que-es-y-como-funciona.html" },
+    { "source": "/blog/yape-empresa-comisiones-vs-soundbox", "destination": "/blog/yape-empresa-comisiones-vs-soundbox.html" }
   ]
 }
