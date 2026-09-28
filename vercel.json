@@ -11,6 +11,10 @@
     { "source": "/privacy-policy", "destination": "/privacy.html" },
     { "source": "/reset-password", "destination": "/reset-password.html" },
     { "source": "/delete-account", "destination": "/delete-account.html" },
-    { "source": "/feedback", "destination": "/beta.html" }
+    { "source": "/feedback", "destination": "/beta.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/articulos", "destination": "/blog.html" },
+    { "source": "/blog/yape-falso-como-saber-si-te-pagaron", "destination": "/blog/yape-falso-como-saber-si-te-pagaron.html" },
+    { "source": "/blog/yape-falso-como-saber-si-de-verdad-te-pagaron", "destination": "/blog/yape-falso-como-saber-si-te-pagaron.html" }
   ]
 }
