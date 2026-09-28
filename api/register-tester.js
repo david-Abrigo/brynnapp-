@@ -4,7 +4,7 @@
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || SUPABASE_ANON_KEY;
-const TEST_LINK = "https://play.google.com/apps/internaltest/4701652003026527529";
+const TEST_LINK = "https://play.google.com/apps/testing/com.brynn.app";
 
 export default async function handler(req, res) {
     res.setHeader("Access-Control-Allow-Credentials", "true");
