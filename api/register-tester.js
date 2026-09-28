@@ -4,7 +4,6 @@
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || SUPABASE_ANON_KEY;
-const TEST_LINK = "https://play.google.com/apps/testing/com.brynn.app";
 
 export default async function handler(req, res) {
     res.setHeader("Access-Control-Allow-Credentials", "true");
@@ -141,7 +140,6 @@ export default async function handler(req, res) {
         return res.status(200).json({
             success: true,
             message: "¡Correo Gmail registrado con éxito!",
-            testLink: TEST_LINK,
             email
         });
 
@@ -149,8 +147,7 @@ export default async function handler(req, res) {
         console.error("Error en register-tester handler:", error);
         return res.status(500).json({
             success: false,
-            error: "Error interno al procesar la solicitud: " + (error.message || "Desconocido"),
-            testLink: TEST_LINK
+            error: "Error interno al procesar la solicitud: " + (error.message || "Desconocido")
         });
     }
 }

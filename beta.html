@@ -403,73 +403,6 @@
             margin-bottom: 16px;
         }
 
-        .btn-play-invite {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #01875F 0%, #006044 100%);
-            color: #FFFFFF;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 800;
-            padding: 13px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(1, 135, 95, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin-bottom: 14px;
-            text-align: center;
-        }
-
-        .btn-play-invite:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(1, 135, 95, 0.6);
-        }
-
-        .btn-play-invite svg {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-            fill: currentColor;
-        }
-
-        .copy-link-row {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            margin-bottom: 14px;
-        }
-
-        .copy-link-input {
-            flex: 1;
-            background: rgba(0, 0, 0, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 8px 12px;
-            font-size: 12px;
-            color: var(--accent-lime);
-            font-family: monospace;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .btn-copy-link {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid var(--card-border);
-            color: var(--text-main);
-            font-size: 12px;
-            font-weight: 700;
-            padding: 8px 14px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-            white-space: nowrap;
-        }
-
-        .btn-copy-link:hover {
-            background: rgba(255, 255, 255, 0.16);
-        }
 
         .tester-steps-list {
             background: rgba(0, 0, 0, 0.25);
@@ -1040,10 +973,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
         </svg>
-        Google Play Store · Prueba Interna Oficial
+        Google Play Store · Solicitud de Acceso
     </div>
-    <h1>Únete a la Prueba Beta de <span>Brynn</span></h1>
-    <p>Regístrate con tu correo de Gmail para acceder a la versión exclusiva en Google Play antes de su lanzamiento público y ayúdanos a calibrar el bot de voz para comercios.</p>
+    <h1>Solicitar Acceso a la Versión Beta de <span>Brynn</span></h1>
+    <p>Ingresa tu correo de Gmail para solicitar tu alta en la prueba oficial de Google Play. Al enviar tu solicitud, se abrirá WhatsApp con tu correo para que el desarrollador te dé de alta y te envíe tu acceso.</p>
 </div>
 
 <main>
@@ -1058,11 +991,11 @@
                         </svg>
                     </div>
                     <div class="tester-join-info">
-                        <h3>Solicitar Acceso a la Prueba en Google Play</h3>
+                        <h3>Solicitar Acceso a Google Play</h3>
                     </div>
                 </div>
                 
-                <p>Ingresa tu correo de <strong>Gmail</strong> (el mismo registrado en tu Google Play Store) para darte de alta y descargar la app oficial de Brynn directamente en tu teléfono.</p>
+                <p>Ingresa tu correo de <strong>Gmail</strong> (el mismo registrado en tu Google Play Store). Al hacer clic en <strong>Solicitar Acceso</strong>, se enviará un mensaje directo a WhatsApp con tu correo para autorizarte.</p>
 
                 <!-- Formulario de Registro Gmail -->
                 <form id="testerRegisterForm" onsubmit="handleTesterRegisterSubmit(event)">
@@ -1080,58 +1013,43 @@
                         </div>
                         <input type="text" id="testerNameInput" class="join-gmail-input" placeholder="Tu nombre o nombre del negocio *" required>
                         <button type="submit" id="btnSubmitTester" class="btn-submit-tester">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
+                            <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3-1.1-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.4.2-.7.1a8.9 8.9 0 0 1-5.5-4.8c-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6s-.9-2.2-1.2-3c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1 .5a4.2 4.2 0 0 0-1.3 3.1c0 2.4 1.8 4.8 2 5.1.3.4 3.5 5.4 8.5 7.6 1.2.5 2.1.8 2.8 1 .9.3 1.8.2 2.5.1.8-.1 2.3-1 2.7-1.9.3-1 .3-1.8.2-1.9-.1-.2-.3-.3-.6-.5z"/>
                             </svg>
-                            Solicitar Acceso y Ver Enlace de Prueba
+                            Solicitar Acceso
                         </button>
                     </div>
                 </form>
 
-                <!-- Caja con Enlace a la Prueba (Aparece tras registrarse) -->
+                <!-- Caja de Confirmación tras enviar solicitud -->
                 <div id="testerLinkBox" class="tester-link-box">
                     <span class="tester-link-badge">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"></polyline>
                         </svg>
-                        ¡Correo Registrado Exitosamente!
+                        ¡Solicitud Registrada Exitosamente!
                     </span>
-                    <div class="tester-link-title">Enlace Oficial de Prueba Interna</div>
+                    <div class="tester-link-title">Envía la confirmación por WhatsApp</div>
                     <p class="tester-link-desc">
-                        Hemos registrado tu cuenta <strong id="registeredEmailDisplay" style="color:var(--accent-lime);"></strong>. Haz clic en el botón a continuación para aceptar la invitación y descargar Brynn desde Google Play Store:
+                        Hemos registrado tu correo <strong id="registeredEmailDisplay" style="color:var(--accent-lime);"></strong>. Haz clic en el siguiente botón para enviar el mensaje con tu correo al desarrollador por WhatsApp y autorizar tu cuenta en Google Play:
                     </p>
 
-                    <!-- Botón directo a Google Play Testing -->
-                    <a id="btnPlayStoreLink" href="https://play.google.com/apps/testing/com.brynn.app" target="_blank" rel="noopener noreferrer" class="btn-play-invite">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3.609 1.814L13.793 12 3.61 22.186c-.352-.352-.56-.84-.56-1.408V3.222c0-.568.208-1.056.56-1.408zM15.207 13.414l2.482 2.482-11.834 6.78 9.352-9.262zm0-2.828l-9.352-9.262 11.834 6.78-2.482 2.482zm1.414 1.414l3.774 2.164c.82.47.82 1.233 0 1.703L16.62 12z"/>
-                        </svg>
-                        Unirse a la Prueba en Google Play
-                    </a>
-
-                    <!-- Campo con enlace copiable -->
-                    <div class="copy-link-row">
-                        <input type="text" id="playStoreUrlField" readonly value="https://play.google.com/apps/testing/com.brynn.app" class="copy-link-input">
-                        <button type="button" id="btnCopyLink" onclick="copyPlayTestLink()" class="btn-copy-link">Copiar</button>
-                    </div>
-
-                    <!-- Instrucciones de instalación -->
-                    <div class="tester-steps-list">
-                        <strong>📌 Pasos para instalar:</strong>
-                        <ol>
-                            <li>Abre el enlace con la misma cuenta de Gmail que registraste.</li>
-                            <li>Toca en <strong>"Convertirse en verificador / Aceptar invitación"</strong>.</li>
-                            <li>Una vez aceptada, Google Play te dirigirá automáticamente a descargar la app desde <strong>Play Store</strong>.</li>
-                        </ol>
-                    </div>
-
-                    <!-- Enlace de WhatsApp -->
-                    <a id="waTesterConfirmLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-send-wa" style="width:100%; justify-content:center;">
+                    <!-- Enlace directo de WhatsApp -->
+                    <a id="waTesterConfirmLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-send-wa" style="width:100%; justify-content:center; padding: 13px 18px; font-size: 14px; margin-bottom: 14px;">
                         <svg viewBox="0 0 32 32">
                             <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3-1.1-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.4.2-.7.1a8.9 8.9 0 0 1-5.5-4.8c-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6s-.9-2.2-1.2-3c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1 .5a4.2 4.2 0 0 0-1.3 3.1c0 2.4 1.8 4.8 2 5.1.3.4 3.5 5.4 8.5 7.6 1.2.5 2.1.8 2.8 1 .9.3 1.8.2 2.5.1.8-.1 2.3-1 2.7-1.9.3-1 .3-1.8.2-1.9-.1-.2-.3-.3-.6-.5z"/>
                         </svg>
-                        Confirmar activación por WhatsApp
+                        Enviar Mensaje por WhatsApp al Desarrollador
                     </a>
+
+                    <!-- Instrucciones breves -->
+                    <div class="tester-steps-list">
+                        <strong>📌 ¿Qué sucederá después?</strong>
+                        <ol>
+                            <li>El desarrollador recibe tu correo y te agregará a la lista en Google Play Console.</li>
+                            <li>Te responderá por WhatsApp confirmando tu activación y compartiéndote tu enlace de acceso personal.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
 
@@ -1508,9 +1426,7 @@ function escapeHtml(str) {
               .replace(/'/g, "&#039;");
 }
 
-// ── Registro de Tester Gmail & Acceso a Prueba Oficial ──
-const PLAY_INTERNAL_TEST_URL = "https://play.google.com/apps/testing/com.brynn.app";
-
+// ── Registro de Solicitud de Tester & Notificación a WhatsApp ──
 function validateGmailLive(input) {
     const errorEl = document.getElementById('gmailErrorMsg');
     const val = input.value.trim().toLowerCase();
@@ -1551,7 +1467,7 @@ async function handleTesterRegisterSubmit(e) {
     if (errorEl) errorEl.style.display = 'none';
 
     btn.disabled = true;
-    btn.innerHTML = '<span style="display:inline-block;animation:spin 1s linear infinite;">⏳</span> Registrando en Google Play...';
+    btn.innerHTML = '<span style="display:inline-block;animation:spin 1s linear infinite;">⏳</span> Registrando solicitud...';
 
     try {
         const deviceHint = /Android/i.test(navigator.userAgent) ? "Android" : (/iPhone|iPad/i.test(navigator.userAgent) ? "iOS" : "Navegador Web");
@@ -1566,12 +1482,22 @@ async function handleTesterRegisterSubmit(e) {
 
     try {
         localStorage.setItem('brynn_registered_tester_gmail', email);
+        localStorage.setItem('brynn_registered_tester_name', name);
     } catch (e) {}
 
-    showRegisteredTesterBox(email);
+    // Mensaje automático por WhatsApp hacia el número del desarrollador con el correo y nombre
+    const waMsg = encodeURIComponent(
+        `Hola, he solicitado acceso a la prueba beta de Brynn con mi correo de Gmail: ${email} (Nombre/Negocio: ${name}). Por favor, habilítame en Google Play para comenzar a probar. ¡Muchas gracias!`
+    );
+    const waUrl = `https://wa.me/${SUPPORT_WHATSAPP}?text=${waMsg}`;
+
+    showRegisteredTesterBox(email, waUrl);
+
+    // Abrir WhatsApp automáticamente con el mensaje
+    window.open(waUrl, '_blank');
 }
 
-function showRegisteredTesterBox(email) {
+function showRegisteredTesterBox(email, directWaUrl) {
     const form = document.getElementById('testerRegisterForm');
     const box = document.getElementById('testerLinkBox');
     const emailDisplay = document.getElementById('registeredEmailDisplay');
@@ -1582,35 +1508,12 @@ function showRegisteredTesterBox(email) {
     if (box) box.style.display = 'block';
 
     if (waLink) {
-        const waMsg = encodeURIComponent(
-            `Hola equipo de Brynn, acabo de registrar mi correo (${email}) en la web para la prueba interna de Google Play. ¿Podrían confirmar mi habilitación? ¡Gracias!`
-        );
-        waLink.href = `https://wa.me/${SUPPORT_WHATSAPP}?text=${waMsg}`;
+        const savedName = localStorage.getItem('brynn_registered_tester_name') || 'Tester';
+        const url = directWaUrl || `https://wa.me/${SUPPORT_WHATSAPP}?text=${encodeURIComponent(
+            `Hola, he solicitado acceso a la prueba beta de Brynn con mi correo de Gmail: ${email} (Nombre/Negocio: ${savedName}). Por favor, habilítame en Google Play para comenzar a probar. ¡Muchas gracias!`
+        )}`;
+        waLink.href = url;
     }
-}
-
-function copyPlayTestLink() {
-    const copyInput = document.getElementById('playStoreUrlField');
-    const copyBtn = document.getElementById('btnCopyLink');
-    if (!copyInput) return;
-
-    copyInput.select();
-    copyInput.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyInput.value).then(() => {
-        if (copyBtn) {
-            const originalText = copyBtn.textContent;
-            copyBtn.textContent = '✅ ¡Copiado!';
-            copyBtn.style.background = 'rgba(204, 255, 0, 0.2)';
-            copyBtn.style.color = 'var(--accent-lime)';
-            setTimeout(() => {
-                copyBtn.textContent = originalText;
-                copyBtn.style.background = '';
-                copyBtn.style.color = '';
-            }, 2000);
-        }
-    }).catch(() => {
-        alert('Enlace copiado: ' + copyInput.value);
-    });
 }
 
 function checkPreviousTesterRegistration() {
