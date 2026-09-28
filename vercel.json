@@ -12,5 +12,16 @@
     { "source": "/reset-password", "destination": "/reset-password.html" },
     { "source": "/delete-account", "destination": "/delete-account.html" },
     { "source": "/feedback", "destination": "/beta.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }
