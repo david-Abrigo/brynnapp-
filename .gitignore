@@ -28,3 +28,4 @@ screenshot_*.png
 local.properties
 /build/
 *.iml
+/public/

@@ -1,6 +1,0 @@
-# robots.txt para Brynn Soundbox
-User-agent: *
-Allow: /
-Disallow: /api/
-
-Sitemap: https://brynnapp.vercel.app/sitemap.xml
