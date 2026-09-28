@@ -20,8 +20,6 @@
     { "source": "/blog/parlante-para-yape", "destination": "/blog/parlante-para-yape-que-es-y-como-funciona.html" },
     { "source": "/blog/yape-empresa-comisiones-vs-soundbox", "destination": "/blog/yape-empresa-comisiones-vs-soundbox.html" },
     { "source": "/google0cb774b840a8cce6.html", "destination": "/google0cb774b840a8cce6.html" },
-    { "source": "/google0cb774b840a8cce6", "destination": "/google0cb774b840a8cce6.html" },
-    { "source": "/ads", "destination": "/ads.html" },
-    { "source": "/guiones", "destination": "/ads.html" }
+    { "source": "/google0cb774b840a8cce6", "destination": "/google0cb774b840a8cce6.html" }
   ]
 }
