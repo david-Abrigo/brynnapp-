@@ -32,12 +32,55 @@
     line-height: 1.65;
 }
 
+.hero-rule-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 77, 90, 0.12);
+    border: 1px solid rgba(255, 77, 90, 0.35);
+    color: #FF7B84;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 13.5px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    margin-bottom: 28px;
+    box-shadow: 0 0 20px rgba(255, 77, 90, 0.2);
+}
+
 .cta-group {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
+}
+
+/* Sellos / Trust Badges */
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.hero-badges li {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-sub);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-badges li svg {
+    width: 16px;
+    height: 16px;
+    color: var(--accent-lime);
+    flex-shrink: 0;
 }
 
 /* Metrics Strip */
@@ -107,7 +150,7 @@
 /* Section Header */
 .section-header {
     text-align: center;
-    max-width: 720px;
+    max-width: 760px;
     margin: 80px auto 36px;
     padding: 0 20px;
 }
@@ -124,6 +167,10 @@
     margin-bottom: 10px;
 }
 
+.section-tag.danger {
+    color: var(--accent-danger);
+}
+
 .section-header h2 {
     font-size: clamp(26px, 4vw, 36px);
     font-weight: 800;
@@ -137,7 +184,343 @@
     font-size: 16px;
 }
 
-/* Features Grid */
+/* ==========================================================================
+   SECCIÓN: EL PROBLEMA DEL YAPE FALSO (HISTORIAS & ESCUDOS)
+   ========================================================================== */
+.stories-grid {
+    max-width: 1120px;
+    margin: 0 auto 36px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.story-card {
+    background: linear-gradient(135deg, rgba(26, 18, 28, 0.7) 0%, rgba(14, 19, 31, 0.95) 100%);
+    border: 1px solid rgba(255, 77, 90, 0.28);
+    border-radius: 20px;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.story-quote {
+    font-size: 18px;
+    font-weight: 800;
+    color: #FFB3B8;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.story-quote span {
+    color: #FFFFFF;
+    text-decoration: underline wavy #FF4D5A;
+}
+
+.story-card p {
+    font-size: 14.5px;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+.shields-grid {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.shield-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 26px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.shield-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--card-border-hover);
+}
+
+.shield-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: rgba(204, 255, 0, 0.1);
+    color: var(--accent-lime);
+    border: 1px solid rgba(204, 255, 0, 0.25);
+}
+
+.shield-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.shield-card p {
+    font-size: 13.5px;
+    color: var(--text-sub);
+    line-height: 1.55;
+}
+
+/* ==========================================================================
+   SECCIÓN: PARA QUIÉN ES (CASOS DE USO REALES)
+   ========================================================================== */
+.use-cases-grid {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+.use-case-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 28px;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.use-case-card:hover {
+    border-color: var(--card-border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.use-case-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.use-case-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(142, 130, 254, 0.12);
+    border: 1px solid rgba(142, 130, 254, 0.25);
+    color: var(--accent-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.use-case-header h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.use-case-pain {
+    font-size: 13.5px;
+    font-style: italic;
+    color: #FFB8BD;
+    background: rgba(255, 77, 90, 0.08);
+    border-left: 3px solid var(--accent-danger);
+    padding: 8px 12px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 12px;
+}
+
+.use-case-benefit {
+    font-size: 14px;
+    color: var(--text-sub);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ==========================================================================
+   SECCIÓN: COMPARATIVA HONESTA (ALTERNATIVAS VS BRYNN)
+   ========================================================================== */
+.compare-grid {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.compare-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.compare-card.highlight {
+    background: linear-gradient(135deg, rgba(20, 26, 45, 0.95) 0%, rgba(14, 19, 31, 0.95) 100%);
+    border: 1px solid var(--accent-lime);
+    box-shadow: 0 8px 30px var(--accent-lime-glow);
+}
+
+.compare-card.highlight::before {
+    content: "RECOMENDADO";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-lime);
+    color: #08090C;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 3px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+}
+
+.compare-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.compare-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.compare-list li {
+    font-size: 13px;
+    line-height: 1.45;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.compare-list li.check {
+    color: var(--text-main);
+}
+
+.compare-list li.check svg {
+    color: var(--accent-lime);
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.compare-list li.cross {
+    color: var(--text-muted);
+}
+
+.compare-list li.cross svg {
+    color: #FF5E62;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   SECCIÓN: POR QUÉ SIN COMISIÓN NI RUC
+   ========================================================================== */
+.zero-fee-box {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 34px 28px;
+    background: #0B0F1A;
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+}
+
+.fee-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.fee-flow-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.fee-flow-item.highlight-flow {
+    border-color: var(--accent-lime);
+    background: rgba(204, 255, 0, 0.04);
+}
+
+.fee-flow-item h4 {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--text-main);
+}
+
+.fee-flow-item p {
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.fee-arrow {
+    color: var(--accent-purple);
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.fee-bullets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--card-border);
+}
+
+.fee-bullet h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent-lime);
+    margin-bottom: 4px;
+}
+
+.fee-bullet p {
+    font-size: 12.5px;
+    color: var(--text-sub);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   FEATURES GRID (CAPACIDADES DEL SISTEMA)
+   ========================================================================== */
 .features {
     max-width: 1160px;
     margin: 0 auto;
@@ -205,7 +588,9 @@
     line-height: 1.6;
 }
 
-/* FAQ Section */
+/* ==========================================================================
+   FAQ SECTION
+   ========================================================================== */
 .faq-section {
     max-width: 1080px;
     margin: 90px auto 40px;
@@ -275,7 +660,9 @@
     padding-left: 40px;
 }
 
-/* Beta Teaser Section */
+/* ==========================================================================
+   BETA TEASER SECTION
+   ========================================================================== */
 .beta-teaser-section {
     max-width: 1120px;
     margin: 70px auto 40px;
@@ -326,7 +713,9 @@
     flex-wrap: wrap;
 }
 
-/* Banner CTA */
+/* ==========================================================================
+   BANNER CTA
+   ========================================================================== */
 .banner {
     max-width: 1120px;
     margin: 80px auto 90px;
@@ -370,6 +759,15 @@
 @media (max-width: 768px) {
     .metrics-bar {
         grid-template-columns: 1fr;
+    }
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+    .fee-flow {
+        grid-template-columns: 1fr;
+    }
+    .fee-arrow {
+        transform: rotate(90deg);
     }
     .faq-a {
         padding-left: 0;

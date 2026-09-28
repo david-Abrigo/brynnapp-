@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brynn - Bot/Parlante de pagos para yape</title>
-    <meta name="description" content="Escucha tus cobros de Yape en voz alta. Evita estafas, conecta sucursales y confirma ventas al instante sin mirar el celular.">
+    <title>Brynn Soundbox - Tu celular anuncia tus pagos de Yape en voz alta</title>
+    <meta name="description" content="App peruana que dice en voz alta cada pago de Yape que te cae. Evita el yape falso con la regla de oro: si no suena, no te pagaron. Funciona con tu Yape de siempre, sin comisiones ni comprar aparatos.">
     <link rel="canonical" href="https://brynnapp.vercel.app/">
     <link rel="icon" type="image/png" href="/assets/images/logo-app.png">
 
     <!-- Open Graph / Redes Sociales -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Brynn - Bot/Parlante de pagos para yape">
-    <meta property="og:description" content="Escucha tus cobros de Yape en voz alta. Evita estafas, conecta sucursales y confirma ventas al instante sin mirar el celular.">
+    <meta property="og:title" content="Brynn Soundbox - Tu celular canta cada Yape en voz alta">
+    <meta property="og:description" content="Protege tu negocio contra el Yape falso: si no suena, no te pagaron. Anunciador de cobros por voz para bodegas, taxis, delivery y negocios peruanos.">
     <meta property="og:image" content="https://brynnapp.vercel.app/assets/images/logo-app.png">
 
     <!-- Estilos Modulares -->
@@ -23,15 +23,17 @@
 <header>
     <a href="/" class="logo-box">
         <img src="/assets/images/logo-app.png" alt="Brynn Logo" onerror="this.src='/logo-app.png'">
-        <div>Brynn <span>Bot Parlante para yape</span></div>
+        <div>Brynn <span>Soundbox</span></div>
     </a>
     <nav>
         <span class="header-status">
             <span class="status-dot"></span> Online
         </span>
+        <a href="#yape-falso">Seguridad</a>
+        <a href="#para-quien">Para quién es</a>
         <a href="#funciones">Funciones</a>
+        <a href="#comparativa">Comparativa</a>
         <a href="#faq">FAQ</a>
-        <a href="/terms">Términos</a>
         <a href="/beta" class="header-beta-link">
             <span class="status-dot"></span> Solicitar Acceso
         </a>
@@ -39,15 +41,25 @@
 </header>
 
 <main>
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="pill">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            Bot para yape
+            Anunciador de voz para Yape · Hecho en Perú
         </div>
-        <h1>Convierte tu celular en parlante de yape recibidos<br><span>El bot te avisa cuanto te yapearon</span></h1>
-        <p>Tu asistente de audio inteligente para transferencias móviles. Anuncia ventas en voz alta al instante en cualquier parlante Bluetooth y conecta todas tus cajas sin mirar el celular.</p>
+        <h1>Cuando te pagan por Yape,<br><span>tu celular lo canta en voz alta</span></h1>
+        <p>Apenas te cae un Yape, tu celular dice <strong>cuánto te pagaron, en voz alta</strong>. Tú sigues atendiendo sin agarrar el celular ni cortar la atención de tu cola.</p>
+        
+        <div class="hero-rule-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+            </svg>
+            Regla de oro: Si no suena, no te pagaron
+        </div>
+
         <div class="cta-group">
             <a href="/beta" class="cta-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -55,20 +67,39 @@
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
-                Solicitar acceso exclusivo a la app
+                Solicitar Acceso a la Beta
             </a>
-            <a href="#funciones" class="cta-btn-secondary">
+            <a href="#como-funciona" class="cta-btn-secondary">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 16 16 12 12 8"></polyline>
                     <line x1="8" y1="12" x2="16" y2="12"></line>
                 </svg>
-                Ver funciones
+                Ver cómo funciona
             </a>
         </div>
+
+        <ul class="hero-badges">
+            <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Gratis para empezar
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Con tu Yape de siempre
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Sin comisiones por venta
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Nunca te pedimos tu clave
+            </li>
+        </ul>
     </section>
 
-    <!-- Metrics Bar -->
+    <!-- METRICS STRIP -->
     <section class="metrics-bar">
         <div class="metric-card">
             <div class="metric-info">
@@ -85,7 +116,7 @@
         </div>
         <div class="metric-card">
             <div class="metric-info">
-                <span class="metric-label">Seguridad en Caja</span>
+                <span class="metric-label">Protección en Caja</span>
                 <span class="metric-value">100% Real</span>
             </div>
             <span class="metric-badge purple">
@@ -112,7 +143,7 @@
         </div>
         <div class="metric-card">
             <div class="metric-info">
-                <span class="metric-label">Sucursales / Cajas</span>
+                <span class="metric-label">Cajas y Sucursales</span>
                 <span class="metric-value">Multi-caja</span>
             </div>
             <span class="metric-badge purple">
@@ -127,7 +158,277 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- SECCIÓN: EL PROBLEMA DEL YAPE FALSO -->
+    <section class="section-header" id="yape-falso">
+        <div class="section-tag danger">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            El problema es real
+        </div>
+        <h2>El Yape falso ataca justo cuando estás más ocupado</h2>
+        <p>Apps truchas y capturas editadas engañan al ojo todos los días en bodegas y comercios de todo el Perú. Estas dos escenas te van a sonar:</p>
+    </section>
+
+    <div class="stories-grid">
+        <div class="story-card">
+            <div class="story-quote">«Ya te yapeé, casero.» <span>Y el pago nunca llegó.</span></div>
+            <p>Hora punta. Un cliente te enseña la pantalla un segundo; tú con tres personas en cola apenas la miras y le entregas la mercadería. En la noche cuadras la caja y ese pago no existe: la captura era editada, idéntica a la real.</p>
+        </div>
+        <div class="story-card">
+            <div class="story-quote">«¿Cayó el yapeo?» <span>Y tú llamando toda la tarde.</span></div>
+            <p>El Yape del negocio está en tu celular, pero no estás en la tienda. Tu personal tiene que llamarte por cada venta para confirmar si cayó el dinero. Mientras atienden llamadas, la cola crece y las ventas se enfrían.</p>
+        </div>
+    </div>
+
+    <div class="shields-grid">
+        <div class="shield-card">
+            <div class="shield-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+            </div>
+            <h3>Solo Pagos Reales</h3>
+            <p>El anuncio nace de la notificación oficial de Yape en tu teléfono. Ninguna captura trucada ni app falsa puede hacer sonar a Brynn.</p>
+        </div>
+        <div class="shield-card">
+            <div class="shield-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+            <h3>Suena Fuerte para Todos</h3>
+            <p>Tú y el cliente lo escuchan al mismo tiempo en el local, fuerte y claro. Se acabó el incómodo «a ver, préstame tu pantalla para verificar».</p>
+        </div>
+        <div class="shield-card">
+            <div class="shield-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path>
+                </svg>
+            </div>
+            <h3>Te Avisa Donde Estés</h3>
+            <p>El mismo pago suena en la tienda y en tu propio celular aunque estés en tu casa o haciendo compras. Tu gente atiende tranquila sin llamarte.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: CÓMO FUNCIONA -->
+    <section class="section-header" id="como-funciona">
+        <div class="section-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Cómo funciona
+        </div>
+        <h2>Listo en 5 minutos, sin trámites ni papeleo</h2>
+        <p>No necesitas cuenta bancaria nueva, ni POS adicional, ni firmar contratos. Solo tu celular Android de siempre.</p>
+    </section>
+
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon-box lime">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect>
+                    <path d="M12 6v6m0 0l-2.5-2.5M12 12l2.5-2.5"></path>
+                    <path d="M10.5 18.5h3"></path>
+                </svg>
+            </div>
+            <h3>1. Instala la app</h3>
+            <p>Descarga Brynn en el celular donde te llegan los Yapes del negocio. Compatible con cualquier teléfono Android (versión 8.0 en adelante, incluso modelos sencillos).</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon-box purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"></path>
+                    <path d="M10.5 20a1.8 1.8 0 0 0 3 0"></path>
+                </svg>
+            </div>
+            <h3>2. Dale permiso una sola vez</h3>
+            <p>Autorizas que Brynn detecte los avisos de Yape. No pide contraseñas ni accesos bancarios. Tu cuenta de Yape sigue 100% intacta e independiente.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon-box lime">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </div>
+            <h3>3. Suena solo, para siempre</h3>
+            <p>Desde ese instante, cada cobro se canta al segundo: <em>«¡Yape recibido de 25 soles!»</em> Funciona con pantalla apagada, app cerrada y en plena hora punta.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: PARA QUIÉN ES -->
+    <section class="section-header" id="para-quien">
+        <div class="section-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4"></path>
+                <path d="M12 8h.01"></path>
+            </svg>
+            Casos de uso reales
+        </div>
+        <h2>Si el Yape está en un celular y tú estás en otro, es para ti</h2>
+        <p>Pensado para quien atiende el mostrador sin ser dueño de la cuenta, o para quien no puede exponer su celular principal en la calle.</p>
+    </section>
+
+    <div class="use-cases-grid">
+        <div class="use-case-card">
+            <div class="use-case-header">
+                <div class="use-case-icon">🏪</div>
+                <h3>Bodegas y Puestos de Mercado</h3>
+            </div>
+            <div class="use-case-pain">«Mi gente cobra en el mostrador, pero el Yape está en mi celular.»</div>
+            <p class="use-case-benefit">Tus trabajadores confirman cada cobro al instante sin tener que llamarte, y tú escuchas las ventas desde tu casa. Ningún trabajador entra a tu cuenta.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-header">
+                <div class="use-case-icon">🚕</div>
+                <h3>Taxis y Mototaxis</h3>
+            </div>
+            <div class="use-case-pain">«El Yape es de mi esposa» o «No saco el celular bueno por los robos.»</div>
+            <p class="use-case-benefit">El pasaje se canta en el teléfono que llevas puesto en el timón, aunque la cuenta esté en el celular de tu casa. Cobras seguro sin exponerte.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-header">
+                <div class="use-case-icon">🛵</div>
+                <h3>Delivery y Repartidores</h3>
+            </div>
+            <div class="use-case-pain">«Tomo captura del pago y se la mando al dueño por WhatsApp.»</div>
+            <p class="use-case-benefit">Se acabaron las fotos de comprobantes. El motorizado escucha el cobro en su celular al entregar el pedido, sin esperar a que el dueño le responda.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-header">
+                <div class="use-case-icon">🚌</div>
+                <h3>Combis y Transporte Urbano</h3>
+            </div>
+            <div class="use-case-pain">«El cobrador no tiene el Yape del dueño de la unidad.»</div>
+            <p class="use-case-benefit">El cobrador confirma el pasaje al toque sin tener la cuenta del dueño en la mano y sin fiarse de capturas de pasajeros que se bajan en la esquina.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-header">
+                <div class="use-case-icon">🍽️</div>
+                <h3>Restaurantes, Boticas y Ferreterías</h3>
+            </div>
+            <div class="use-case-pain">«Los mozos cobran y yo estoy en la cocina o almacén.»</div>
+            <p class="use-case-benefit">Cada cobro suena en el parlante del salón. En la noche, la cuenta total del día está lista para cuadrar la caja sin sumar a mano.</p>
+        </div>
+
+        <div class="use-case-card">
+            <div class="use-case-header">
+                <div class="use-case-icon">💼</div>
+                <h3>Peluquerías, Talleres y Negocios Varios</h3>
+            </div>
+            <div class="use-case-pain">«No puedo parar de trabajar para revisar el celular con las manos ocupadas.»</div>
+            <p class="use-case-benefit">Sigue cortando cabello, arreglando un auto o despachando mercadería. La voz te canta el pago y sigues atendiendo sin frenar.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: POR QUÉ SIN COMISIÓN NI RUC -->
+    <section class="section-header">
+        <div class="section-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+            </svg>
+            Transparencia Total
+        </div>
+        <h2>¿Por qué no cobramos comisión ni te pedimos RUC?</h2>
+        <p>Porque tu dinero nunca pasa por nosotros. Esa es toda la explicación.</p>
+    </section>
+
+    <div class="zero-fee-box">
+        <div class="fee-flow">
+            <div class="fee-flow-item">
+                <h4>1. Por dónde entra tu plata</h4>
+                <p>Tu dinero entra directo a tu cuenta de <strong>Yape</strong>. Como siempre ha sido. Lo que te pagan es 100% tuyo.</p>
+            </div>
+            <div class="fee-arrow">➔</div>
+            <div class="fee-flow-item highlight-flow">
+                <h4>2. Qué hace Brynn</h4>
+                <p>Brynn es tu <strong>parlante inteligente</strong>: detecta el aviso oficial y lo canta en voz alta. Al no mover tu plata, no hay nada que descontarte.</p>
+            </div>
+        </div>
+
+        <div class="fee-bullets">
+            <div class="fee-bullet">
+                <h5>💰 S/ 0 Comisión por Venta</h5>
+                <p>Tu plata no pasa por intermediarios. Recibes el 100% de lo que te yapean.</p>
+            </div>
+            <div class="fee-bullet">
+                <h5>📋 Sin RUC ni Papeleos</h5>
+                <p>No emitimos comprobantes ni procesamos pagos: usas tu cuenta actual.</p>
+            </div>
+            <div class="fee-bullet">
+                <h5>📲 Con tu mismo QR</h5>
+                <p>No cambias tu código QR del mostrador ni obligas a tus clientes a usar otra cosa.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: COMPARATIVA HONESTA -->
+    <section class="section-header" id="comparativa">
+        <div class="section-tag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 20V10M12 20V4M6 20v-6"/>
+            </svg>
+            Comparativa Clara
+        </div>
+        <h2>¿Qué opciones tienes hoy para tu mostrador?</h2>
+        <p>Te lo explicamos directo, sin rodeos:</p>
+    </section>
+
+    <div class="compare-grid">
+        <div class="compare-card">
+            <div class="compare-title">Seguir como estás</div>
+            <div class="compare-subtitle">Mirar el celular o confiar en la captura</div>
+            <ul class="compare-list">
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> El Yape falso te agarra en plena hora punta.</li>
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Paras de atender para revisar la pantalla.</li>
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Si sales, tus trabajadores te llaman por cada venta.</li>
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> En la noche tienes que sumar los pagos a mano.</li>
+            </ul>
+        </div>
+
+        <div class="compare-card highlight">
+            <div class="compare-title">Brynn Soundbox</div>
+            <div class="compare-subtitle">App inteligente en tu propio teléfono</div>
+            <ul class="compare-list">
+                <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cada pago real suena solo, sin tocar la pantalla.</li>
+                <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Sigues con tu mismo Yape y tu mismo QR.</li>
+                <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> S/ 0 en equipos extras: usas tu celular Android.</li>
+                <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Dueño y trabajadores escuchan a distancia.</li>
+                <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cuenta y cuadre del día listo automáticamente.</li>
+            </ul>
+        </div>
+
+        <div class="compare-card">
+            <div class="compare-title">Yape Empresa</div>
+            <div class="compare-subtitle">Perfil comercial con ayudantes</div>
+            <ul class="compare-list">
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Te exigen RUC para activarlo.</li>
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Te descuentan comisión por cada venta recibida.</li>
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Si no estás formalizado no puedes usarlo.</li>
+            </ul>
+        </div>
+
+        <div class="compare-card">
+            <div class="compare-title">QR Parlante de Mostrador</div>
+            <div class="compare-subtitle">Aparatos físicos vendidos por procesadores</div>
+            <ul class="compare-list">
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Tienes que comprar el aparato (alrededor de S/ 129).</li>
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Te amarran a cobrar solo con su empresa.</li>
+                <li class="cross"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Suena en la tienda, pero no le avisa al dueño si está lejos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: CAPACIDADES DEL SISTEMA -->
     <section class="section-header" id="funciones">
         <div class="section-tag">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -148,7 +449,7 @@
                 </svg>
             </div>
             <h3>Anuncios en Voz Alta</h3>
-            <p>Escucha el monto y el nombre de quien paga al instante. Sin necesidad de desbloquear o mirar la pantalla de tu celular.</p>
+            <p>Escucha el monto de quien paga al instante. Sin necesidad de desbloquear o mirar la pantalla de tu celular.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon-box purple">
@@ -158,7 +459,7 @@
                 </svg>
             </div>
             <h3>Protección Antifraude</h3>
-            <p>Dile adiós a las capturas de pantalla falsas. Brynn valida directamente las alertas entrantes en tu dispositivo.</p>
+            <p>Dile adiós a las capturas falsas. Brynn valida directamente las alertas oficiales entrantes en tu dispositivo.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon-box lime">
@@ -181,11 +482,11 @@
                 </svg>
             </div>
             <h3>Historial y Reportes</h3>
-            <p>Lleva el control de tus ventas diarias, totales recaudados y exporta reportes detallados en Excel para tu contabilidad.</p>
+            <p>Lleva el control de tus ventas diarias, totales recaudados y exporta reportes detallados para tu contabilidad.</p>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ SECTION AMPLIADA -->
     <section id="faq" class="faq-section">
         <div class="section-header" style="margin-top: 40px; margin-bottom: 20px;">
             <div class="section-tag">
@@ -197,7 +498,7 @@
                 Respuestas Claras
             </div>
             <h2>Preguntas Frecuentes</h2>
-            <p>Todo lo que necesitas saber para comenzar a usar Brynn en tu negocio</p>
+            <p>Lo que todo comerciante y casero pregunta antes de empezar</p>
         </div>
 
         <div class="faq-grid">
@@ -209,21 +510,21 @@
                             <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                         </svg>
                     </span>
-                    ¿Cómo funciona el anuncio de cobros?
+                    ¿Funciona con el celular bloqueado o pantalla apagada?
                 </div>
-                <div class="faq-a">Brynn detecta automáticamente la notificación de pago entrante en tu teléfono y la convierte en voz alta al instante mediante el sintetizador de voz (TTS), anunciando el monto y el nombre del cliente.</div>
+                <div class="faq-a">Sí. El anuncio de audio suena aunque la pantalla esté completamente apagada y sin tener que mantener la app abierta en primer plano. Trabaja como un servicio de fondo continuo, exactamente igual a como funciona tu alarma despertador.</div>
             </div>
 
             <div class="faq-card">
                 <div class="faq-q">
                     <span class="faq-q-icon purple">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"></polyline>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                     </span>
-                    ¿Puedo conectar cualquier parlante Bluetooth?
+                    ¿No pueden falsificar el sonido con un audio de WhatsApp?
                 </div>
-                <div class="faq-a">Sí. Puedes emparejar tu teléfono a cualquier parlante Bluetooth (portátil, de caja o minicomponente) y Brynn transmitirá el audio automáticamente con volumen amplificado.</div>
+                <div class="faq-a">No. El sonido sale directamente de tu propio teléfono o de tu parlante Bluetooth en el mostrador, nunca del celular del cliente. Además, cada pago anunciado queda registrado en tu historial oficial: si tu equipo no lo cantó y no figura en tu registro, ese pago no cayó.</div>
             </div>
 
             <div class="faq-card">
@@ -234,36 +535,60 @@
                             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                         </svg>
                     </span>
-                    ¿Tiene acceso a mi dinero o claves bancarias?
+                    ¿Brynn entra a mi cuenta de Yape o ve mi dinero?
                 </div>
-                <div class="faq-a">No, en absoluto. Brynn no es un banco ni pasarela de pago. Solo lee la alerta visual de confirmación que llega a tu barra de notificaciones para cantarla en voz alta. Nunca accede a tus cuentas ni dinero.</div>
+                <div class="faq-a">No, bajo ninguna circunstancia. Brynn no pide contraseñas, no es una pasarela de pago ni tiene acceso a tu dinero. Solo lee el aviso visual oficial que llega a tu barra de notificaciones para cantarlo en voz alta.</div>
             </div>
 
             <div class="faq-card">
                 <div class="faq-q">
                     <span class="faq-q-icon lime">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect>
+                            <path d="M10.5 18.5h3"></path>
+                        </svg>
+                    </span>
+                    ¿Funciona en iPhone?
+                </div>
+                <div class="faq-a">El celular del mostrador que <strong>recibe</strong> los pagos debe ser Android (debido a las restricciones de seguridad de Apple que impiden leer notificaciones). Sin embargo, para <strong>escuchar</strong> los cobros a distancia en modo dueño o sucursal sí puedes usar iPhone.</div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-q">
+                    <span class="faq-q-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
                             <line x1="19" y1="8" x2="19" y2="14"></line>
-                            <line x1="22" y1="11" x2="16" y2="11"></line>
                         </svg>
                     </span>
-                    ¿Cómo vinculo a los trabajadores en sus cajas?
+                    ¿Dice el nombre del cliente en voz alta?
                 </div>
-                <div class="faq-a">Desde tu app en modo Dueño, generas un código de vinculación de 6 dígitos. Tu trabajador lo ingresa en su propio teléfono en modo Receptor y comenzará a escuchar los cobros al mismo tiempo.</div>
+                <div class="faq-a">Por defecto, la voz canta el monto recibido para mantener la privacidad frente a otros clientes en la tienda. Sin embargo, en la configuración de la app puedes habilitar que también anuncie el nombre si así lo prefieres.</div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-q">
+                    <span class="faq-q-icon lime">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        </svg>
+                    </span>
+                    ¿Gasta mucha batería o internet?
+                </div>
+                <div class="faq-a">No. Brynn no mantiene la pantalla encendida ni descarga archivos pesados. Procesa texto plano ligero al momento exacto de recibir la notificación, por lo que el consumo de datos y batería es prácticamente imperceptible.</div>
             </div>
         </div>
     </section>
 
-    <!-- ── Sección: Prueba Beta en Google Play (Página Exclusiva) ── -->
+    <!-- SECCIÓN: PRUEBA BETA EN GOOGLE PLAY -->
     <section class="beta-teaser-section" id="beta">
         <div class="beta-teaser-card">
             <div class="section-tag" style="margin: 0 auto 16px;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                 </svg>
-                Acceso Anticipado · Google Play Store
+                Acceso Anticipado Oficial · Google Play Store
             </div>
             <h2>Solicita tu Acceso a la Versión Beta</h2>
             <p>El acceso a la app se habilita de forma personalizada en Google Play. Completa el formulario con tu correo de Gmail para solicitar tu invitación y recibir la confirmación por WhatsApp.</p>
@@ -286,10 +611,10 @@
         </div>
     </section>
 
-    <!-- Banner Download -->
+    <!-- BANNER FINAL -->
     <section class="banner" id="descargar">
-        <h2>Lleva tu negocio al siguiente nivel</h2>
-        <p>Ahorra tiempo en caja, acelera la atención a tus clientes y protege tus ganancias con el parlante de pagos más confiable.</p>
+        <h2>¿Listo para que tu mostrador hable?</h2>
+        <p>Ahorra tiempo en caja, acelera la atención a tus clientes y protege tus ganancias con el parlante inteligente más confiable para Yape.</p>
         <a href="/beta" class="cta-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -301,7 +626,7 @@
     </section>
 </main>
 
-<!-- Floating WhatsApp Widget -->
+<!-- FLOATING WHATSAPP WIDGET -->
 <a href="https://wa.me/51910865359?text=Hola%20equipo%20de%20Brynn,%20tengo%20una%20consulta%20sobre%20la%20aplicaci%C3%B3n" class="wa-float" target="_blank" rel="noopener noreferrer" title="Chatear con soporte por WhatsApp" aria-label="Contactar soporte por WhatsApp">
     <svg viewBox="0 0 32 32">
         <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3-1.1-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.4.2-.7.1a8.9 8.9 0 0 1-5.5-4.8c-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6s-.9-2.2-1.2-3c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1 .5a4.2 4.2 0 0 0-1.3 3.1c0 2.4 1.8 4.8 2 5.1.3.4 3.5 5.4 8.5 7.6 1.2.5 2.1.8 2.8 1 .9.3 1.8.2 2.5.1.8-.1 2.3-1 2.7-1.9.3-1 .3-1.8.2-1.9-.1-.2-.3-.3-.6-.5z"/>
@@ -318,9 +643,9 @@
         <a href="/terms">Términos y Privacidad</a>
         <a href="/delete-account">Eliminación de Cuenta</a>
         <a href="/reset-password">Recuperar Contraseña</a>
-        <a href="mailto:soporte.brynn@gmail.com">Soporte por Correo</a>
+        <a href="mailto:soporte@brynn.app">Soporte por Correo</a>
     </div>
-    <p class="footer-copy">&copy; 2026 Brynn - Parlante de Pagos. Todos los derechos reservados.</p>
+    <p class="footer-copy">&copy; 2026 Brynn Soundbox - Parlante de Pagos Inteligente para Yape. Todos los derechos reservados.</p>
 </footer>
 
 <script src="/assets/js/config.js"></script>
